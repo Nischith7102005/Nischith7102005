@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @DrFixoff
+- 👋 Hi, I’m @Nischith.R
 - 👀 I’m interested in improving my skills
 - 🌱 I’m currently learning c and python
 - 💞️ I’m looking to collaborate on the rightful company

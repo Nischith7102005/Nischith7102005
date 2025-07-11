@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @Nischith.R
-- 👀 I’m interested in improving my skills
-- 🌱 I’m currently learning c and python
-- 💞️ I’m looking to collaborate on the rightful company
+- 👋 Hi, I’m Nischith R
+- I’m interested in the fields of data science and cloud computing, and also simplifying tasks using AI
+- I’m currently having knowledge of c, python, html, css, mysql, data structures and algorithms, and also some part of nosql languages
+- The art of science, the growing tech world, the process of simplifying taks are some of the fields of interest
 - 📫 How to reach me nischith.7102005@gmail.com
 
 <!---

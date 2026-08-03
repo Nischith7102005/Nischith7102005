@@ -38,6 +38,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
@@ -45,6 +46,8 @@
     background-color: #0a0a0a;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
@@ -56,7 +59,7 @@
     height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #0a0a0a;
   }
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--border));
@@ -94,11 +97,17 @@
   }
 
   .container-x {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-[120rem] px-5 sm:px-8;
   }
 
   .eyebrow {
     @apply font-mono text-[0.7rem] font-medium uppercase tracking-[0.28em] text-primary/50;
+  }
+
+  /* Light pillar glow utilities */
+  .pillar-glow {
+    background: radial-gradient(60% 80% at 50% 0%, rgba(255,255,255,0.12), transparent 70%);
+    filter: blur(12px);
   }
 }
 
@@ -114,5 +123,11 @@
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 50s linear infinite;
+}
+
+/* Smooth focus */
+:focus-visible {
+  outline: 1px solid rgba(225, 224, 204, 0.4);
+  outline-offset: 3px;
 }

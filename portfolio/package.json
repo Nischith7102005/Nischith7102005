@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "npx serve out",
+    "lint": "next lint",
+    "export": "next build",
+    "preview": "npx serve out",
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "deploy:preview": "npm run build && firebase hosting:channel:deploy preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "firebase": "^12.17.0",
     "framer-motion": "^11.18.0",
     "lucide-react": "^0.469.0",
     "next": "^15.3.0",
@@ -25,7 +30,9 @@
     "autoprefixer": "^10.4.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.3.0",
+    "firebase-tools": "^15.25.1",
     "postcss": "^8.4.0",
+    "serve": "^14.2.6",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.6.0"
   }

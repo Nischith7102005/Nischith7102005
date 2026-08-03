@@ -49,7 +49,55 @@ portfolio/
 Edit `src/lib/data.ts` — all personal information, skills, projects, experience,
 certifications, and education live there.
 
-## Deployment
+## Deployment — Firebase Hosting
 
-Deploy the `portfolio` folder to [Vercel](https://vercel.com), Render, or Railway.
-The project is a standard Next.js application and works out of the box.
+The site is configured for **Firebase Hosting** as a fully static export
+(`next build` outputs plain HTML/CSS/JS into `out/` — no server required).
+
+### 1. Install the Firebase CLI (already a dev dependency)
+
+```bash
+npm install
+```
+
+### 2. Log in once
+
+```bash
+npx firebase login
+```
+
+This opens your browser to authorize Firebase with your Google account. It only
+needs to be done once per machine.
+
+### 3. Deploy
+
+```bash
+npm run deploy        # builds + deploys to production (portfolio-e8340)
+```
+
+Or get a shareable **preview URL** before going live:
+
+```bash
+npm run deploy:preview
+```
+
+### What the config does
+
+- `firebase.json` — hosting config: serves the `out/` folder, sets long-lived
+  cache headers for static assets, and rewrites all routes to `index.html`.
+- `.firebaserc` — pins the deploy to the `portfolio-e8340` project.
+- `src/lib/firebase.ts` + `FirebaseAnalytics.tsx` — initializes **Firebase
+  Analytics** (measurementId `G-YC8H31YN9E`) in the browser to track visits.
+  It silently no-ops where analytics is unavailable.
+
+### Other hosts
+
+Because the build is a pure static export, the `out/` folder can also be dropped
+onto **Netlify**, **Vercel**, **GitHub Pages**, or **Cloudflare Pages** with no
+changes.
+
+## Analytics
+
+Visitor analytics uses your existing Firebase project (`portfolio-e8340`).
+Once deployed, open the Firebase console → **Analytics** to see traffic in
+real time.

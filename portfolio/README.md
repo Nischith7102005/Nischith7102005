@@ -11,8 +11,8 @@ Built with Next.js (App Router), React, TypeScript, Tailwind CSS, and Framer Mot
 - Smooth scrolling and subtle Framer Motion reveal animations
 - Plain, statement-first cards (no decorative icon clutter), timeline layout, interactive project cards
 - Fully responsive, SEO-optimized, and accessibility-conscious
-- Single-page sections: Hero, About, Career Interests, Skills, Experience, Projects,
-  Certifications, Education, Contact
+- Single-page sections: Hero, About, Education, Experience, Projects, Skills,
+  Certifications, Career Interests, Contact
 
 ## Getting started
 
@@ -38,7 +38,7 @@ portfolio/
   src/
     app/                 # layout, metadata, single-page entry
     components/
-      sections/          # Hero, About, Interests, Skills, Experience, Projects, Certs, Education, Contact
+      sections/          # Hero, About, Education, Experience, Projects, Skills, Certs, Interests, Contact
       shared/            # Reveal, SectionHeading, ThemeToggle
       Navbar.tsx, Footer.tsx, ThemeProviders.tsx
     lib/                 # data.ts (all content), utils.ts

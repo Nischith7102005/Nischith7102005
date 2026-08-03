@@ -22,11 +22,6 @@ export function Contact() {
       value: "github.com/Nischith7102005",
       href: identity.github,
     },
-    {
-      label: "Location",
-      value: "Bengaluru, Karnataka, India",
-      href: undefined,
-    },
   ];
 
   return (
@@ -42,7 +37,7 @@ export function Contact() {
         <Reveal>
           <div className="mx-auto max-w-3xl overflow-hidden rounded-[2rem] border border-border bg-card/50 p-1">
             <div className="rounded-[1.9rem] px-6 py-10 sm:px-10 sm:py-12">
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-3">
                 {channels.map((c) => {
                   const inner = (
                     <div className="group flex items-center justify-between gap-4 rounded-2xl border border-border bg-background/70 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-soft">

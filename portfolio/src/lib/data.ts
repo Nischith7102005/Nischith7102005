@@ -47,48 +47,28 @@ export interface CareerInterest {
 
 export const careerInterests: CareerInterest[] = [
   {
-    title: "Business Analysis",
-    description: "Turning business needs into clear requirements, process maps, and actionable solutions.",
-  },
-  {
-    title: "Operations Management",
-    description: "Running day-to-day operations so teams deliver predictably, efficiently, and at scale.",
+    title: "Business & Operations Analysis",
+    description: "Translating business needs into clear requirements, process maps, and actionable solutions.",
   },
   {
     title: "Supply Chain & Logistics",
-    description: "Coordinating procurement, inventory, and distribution to keep value chains flowing.",
+    description: "Coordinating procurement, inventory control, and distribution networks to keep value chains flowing.",
   },
   {
-    title: "Project & Program Management",
-    description: "Planning milestones, coordinating cross-functional teams, and delivering on time.",
+    title: "Project Management & PMO",
+    description: "Planning delivery milestones, coordinating cross-functional teams, and standardising governance.",
   },
   {
-    title: "PMO",
-    description: "Standardising governance, reporting, and portfolio visibility for program success.",
+    title: "Product & Technology Operations",
+    description: "Operationalising technology and AI deployments with workflows, data, and cross-team alignment.",
   },
   {
-    title: "Product Operations",
-    description: "Operationalising product decisions with data, workflows, and cross-team alignment.",
-  },
-  {
-    title: "Procurement & Inventory",
-    description: "Optimising sourcing, stock levels, and supplier performance to control cost and risk.",
-  },
-  {
-    title: "Finance & Business Operations",
-    description: "Aligning operational and financial metrics to improve planning and profitability.",
-  },
-  {
-    title: "Strategy & Planning",
-    description: "Shaping long-term direction, priorities, and roadmaps with structure and evidence.",
-  },
-  {
-    title: "Process Improvement",
-    description: "Mapping, measuring, and redesigning workflows to remove waste and boost throughput.",
+    title: "Strategy & Process Improvement",
+    description: "Mapping, measuring, and redesigning workflows to remove waste and improve organizational throughput.",
   },
   {
     title: "Operations Analytics",
-    description: "Turning operational data into dashboards, KPIs, and decisions that move outcomes.",
+    description: "Turning raw operational signals into dashboards, KPIs, and evidence-based decision support.",
   },
 ];
 
@@ -109,25 +89,14 @@ export const skillCategories: SkillCategory[] = [
     label: "Business & Operations",
     blurb: "The core operating disciplines that keep teams aligned and delivering.",
     skills: [
-      "Business Analysis",
-      "Operations Management",
-      "Process Improvement",
-      "Project Coordination",
-      "Requirements Gathering",
-      "Process Mapping",
+      "Requirements Engineering",
+      "Process Mapping & BPMN",
       "Workflow Optimization",
-      "Stakeholder Communication",
-      "Gap Analysis",
-      "Strategic Planning",
-      "KPI Reporting",
-      "Operations Analytics",
-      "Inventory Tracking",
-      "Business Communication",
-      "Cross-functional Collaboration",
-      "Technical Documentation",
-      "Sprint Planning",
-      "Milestone Tracking",
-      "Task Management",
+      "Gap & Root Cause Analysis",
+      "KPI & Metrics Benchmarking",
+      "Sprint & Milestone Planning",
+      "Stakeholder Alignment",
+      "Risk & Resource Management",
     ],
   },
   {
@@ -136,14 +105,14 @@ export const skillCategories: SkillCategory[] = [
     blurb: "Turning raw information into reporting, insight, and decisions.",
     skills: [
       "SQL",
-      "Excel",
       "Python",
-      "Pandas",
-      "MongoDB",
+      "Excel & VBA",
+      "Pandas & NumPy",
       "dbt Core",
-      "ETL",
+      "MongoDB",
+      "ETL Pipelines",
       "Data Visualization",
-      "Reporting",
+      "Statistical Reporting",
     ],
   },
   {
@@ -151,16 +120,14 @@ export const skillCategories: SkillCategory[] = [
     label: "Cloud & Deployment",
     blurb: "Shipping, hosting, and operating technology reliably and securely.",
     skills: [
-      "AWS",
+      "AWS Services",
       "Docker",
+      "CI/CD Pipelines",
       "GitHub Actions",
       "Jenkins",
-      "Vercel",
-      "Render",
+      "Vercel & Render",
       "Railway",
-      "Convex",
-      "CI/CD",
-      "Environment Configuration",
+      "Environment Management",
     ],
   },
   {
@@ -168,28 +135,23 @@ export const skillCategories: SkillCategory[] = [
     label: "AI & Automation",
     blurb: "Using AI and workflow automation to remove friction and scale effort.",
     skills: [
+      "n8n Workflow Automation",
+      "AI Process Integration",
       "Prompt Engineering",
-      "AI-Assisted Research",
-      "AI Workflow Optimization",
-      "AI-Assisted Development",
-      "AI Content Generation",
-      "AI Data Analysis",
-      "n8n",
-      "REST APIs",
-      "API Integration",
-      "Process Automation",
+      "AI Monitoring Dashboards",
+      "REST APIs & Webhooks",
+      "Cognitive Waste Indexing",
     ],
   },
   {
     id: "research",
-    label: "Research",
+    label: "Research & Strategy",
     blurb: "Synthesising information to inform strategy and decisions.",
     skills: [
-      "Technical Research",
-      "Internet Research",
-      "Documentation",
-      "Long-form Writing",
+      "Technical Documentation",
+      "Market & Industry Research",
       "Information Synthesis",
+      "Executive Reporting",
       "Web Scraping",
     ],
   },
@@ -237,12 +199,10 @@ export const projects: Project[] = [
     description:
       "Led the planning and delivery of a platform that verifies and manages digital credentials, coordinating stakeholders and translating business needs into a clear technical plan.",
     focus: [
-      "Project leadership and delivery planning",
-      "Sprint planning and milestone tracking",
-      "Stakeholder requirement gathering",
-      "Technical documentation and API specifications",
-      "Architecture documentation",
-      "Cross-functional coordination across teams",
+      "Led end-to-end delivery planning, sprint cycles, and milestone tracking",
+      "Conducted stakeholder requirement gathering and scope definition",
+      "Authored technical specifications, architecture diagrams, and API documentation",
+      "Coordinated cross-functional execution between technical and business teams",
     ],
     outcome:
       "Shipped a structured, well-documented product by aligning stakeholders on requirements and keeping delivery on schedule.",
@@ -254,11 +214,10 @@ export const projects: Project[] = [
     description:
       "Built operations analytics and monitoring dashboards that surface KPIs and support operational decisions, centred on a Cognitive Waste Index framework.",
     focus: [
-      "Operations analytics and KPI reporting",
-      "AI monitoring dashboards",
-      "Business dashboards for decision support",
-      "Cognitive Waste Index framework design",
-      "Operational decision support",
+      "Designed a Cognitive Waste Index framework to measure operational inefficiency",
+      "Built interactive monitoring dashboards for real-time KPI visibility",
+      "Engineered data pipelines to turn raw operational signals into actionable metrics",
+      "Provided structured reporting to support leadership decision-making",
     ],
     outcome:
       "Turned raw operational signals into visible KPIs that help teams spot inefficiency and act on it.",
@@ -270,11 +229,10 @@ export const projects: Project[] = [
     description:
       "A strategic planning project combining requirements engineering and content intelligence with interactive visualisation to support better decisions.",
     focus: [
-      "Strategic planning",
-      "Requirements engineering",
-      "Content intelligence",
-      "Interactive visualization",
-      "Decision support",
+      "Engineered strategic planning models for complex information architectures",
+      "Translated qualitative stakeholder needs into structured requirements",
+      "Developed interactive data visualisations to clarify strategic tradeoffs",
+      "Integrated content intelligence to streamline strategic planning workflows",
     ],
     outcome:
       "Provided a clear, visual decision-support layer for planning teams navigating complex information.",
@@ -330,9 +288,9 @@ export const education = {
   period: "2023 – 2027",
   cgpa: "8.13 / 10",
   details: [
-    "Focused on applying computing to business, operations, and analytics",
-    "Combined technical coursework with management, entrepreneurship, and operations thinking",
-    "Built hands-on projects spanning analytics, automation, AI, and process improvement",
+    "Core Coursework: Database Management Systems, Data Structures, Cloud Computing, Operations & Systems Analysis",
+    "Specialized focus on process optimization, supply chain analytics, and technical project management",
+    "Engaged in hands-on technical simulations, hackathons, and industry certification tracks",
   ],
 };
 
@@ -342,11 +300,11 @@ export const education = {
 
 export const nav = [
   { label: "About", href: "#about" },
-  { label: "Interests", href: "#interests" },
-  { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "Certifications", href: "#certifications" },
-  { label: "Education", href: "#education" },
+  { label: "Interests", href: "#interests" },
   { label: "Contact", href: "#contact" },
 ];

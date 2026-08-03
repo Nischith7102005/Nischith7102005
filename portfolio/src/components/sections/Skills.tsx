@@ -11,13 +11,14 @@ export function Skills() {
   const current = skillCategories.find((c) => c.id === active)!;
 
   return (
-    <section id="skills" className="relative py-24 md:py-32">
+    <section id="skills" className="relative border-t border-[#E1E0CC]/[0.06] bg-[#0a0a0a] py-24 md:py-32">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="container-x">
         <SectionHeading
-          index="05"
+          index="03"
           eyebrow="Skills"
-          title="A toolkit built for operations & technology"
-          description="Grouped across the disciplines I use to improve business processes and drive efficiency."
+          title="Toolkit for operations & technology"
+          description="Grouped across disciplines I use to improve business processes, ship automation, and turn signals into decisions."
         />
 
         {/* Category tabs */}
@@ -31,8 +32,8 @@ export function Skills() {
               className={cn(
                 "inline-flex items-center rounded-full border px-4 py-2 text-sm transition-all",
                 active === cat.id
-                  ? "border-transparent bg-primary font-medium text-black"
-                  : "border-primary/20 text-primary/55 hover:border-primary/40 hover:text-primary"
+                  ? "border-[#E1E0CC] bg-[#E1E0CC] font-medium text-black shadow-[0_0_20px_rgba(225,224,204,0.15)]"
+                  : "border-[#E1E0CC]/15 bg-[#E1E0CC]/[0.03] text-[#E1E0CC]/55 hover:border-[#E1E0CC]/25 hover:text-[#E1E0CC]/90 hover:bg-[#E1E0CC]/[0.06]"
               )}
             >
               {cat.label}
@@ -45,28 +46,30 @@ export function Skills() {
             key={current.id}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border border-primary/10 bg-white/[0.03] p-6 sm:p-10"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="relative overflow-hidden rounded-[1.5rem] border border-[#E1E0CC]/10 bg-[#111] p-7 sm:p-10"
           >
-            <div className="mb-1 flex flex-wrap items-baseline justify-between gap-3">
-              <h3 className="text-xl font-medium tracking-[-0.02em] text-primary">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <div className="pointer-events-none absolute -top-24 right-12 h-48 w-56 bg-white/5 blur-[50px]" />
+
+            <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
+              <h3 className="text-[1.35rem] font-[450] tracking-[-0.03em] text-[#E1E0CC]">
                 {current.label}
               </h3>
-              <span className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-primary/40">
-                {current.skills.length} skills
+              <span className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-[#E1E0CC]/35">
+                {current.skills.length} skills · {current.blurb}
               </span>
             </div>
-            <p className="mb-7 text-sm text-primary/50">{current.blurb}</p>
 
-            <ul className="flex flex-wrap gap-2.5">
+            <ul className="mt-6 flex flex-wrap gap-2.5">
               {current.skills.map((skill, i) => (
                 <motion.li
                   key={skill}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.02 * i, duration: 0.3 }}
-                  className="rounded-full border border-primary/15 bg-black/40 px-4 py-2 text-sm text-primary/70 transition-colors hover:border-primary/40 hover:text-primary"
+                  initial={{ opacity: 0, scale: 0.92, filter: "blur(4px)" }}
+                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                  transition={{ delay: 0.018 * i, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  className="rounded-full border border-[#E1E0CC]/10 bg-[#0a0a0a] px-4 py-2 text-[0.9rem] tracking-[0.01em] text-[#E1E0CC]/70 transition-all hover:border-[#E1E0CC]/25 hover:text-[#E1E0CC] hover:bg-[#E1E0CC]/[0.06]"
                 >
                   {skill}
                 </motion.li>

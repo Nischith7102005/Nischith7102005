@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative">
+      <main className="relative bg-[#0a0a0a]">
         <Hero />
         <Marquee />
         <About />
-        <Education />
-        <Experience />
         <Projects />
+        <Experience />
         <Skills />
+        <Education />
         <Certifications />
         <CareerInterests />
         <Contact />

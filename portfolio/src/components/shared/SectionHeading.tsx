@@ -22,34 +22,39 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className={cn(
-        "mb-16 max-w-3xl",
-        align === "center" && "mx-auto text-center",
-        className
-      )}
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+      className={cn("mb-14 max-w-3xl md:mb-20", align === "center" && "mx-auto text-center", className)}
     >
-      <p
+      <div
         className={cn(
-          "eyebrow mb-5 flex items-center",
+          "mb-6 flex items-center gap-3",
           align === "center" && "justify-center"
         )}
       >
-        {index && <span className="text-primary">{index}&nbsp;&nbsp;·&nbsp;&nbsp;</span>}
-        {eyebrow}
-        <span className="ml-3 text-primary">*</span>
-      </p>
-      <h2 className="text-[clamp(2.25rem,6vw,4.5rem)] font-medium leading-[0.95] tracking-[-0.045em] text-primary">
+        {index && (
+          <span className="font-mono text-[0.7rem] tracking-[0.2em] text-[#E1E0CC]/40">
+            {index}
+          </span>
+        )}
+        {index && <span className="h-px w-8 bg-[#E1E0CC]/15" />}
+        <p className="font-mono text-[0.7rem] uppercase tracking-[0.26em] text-[#E1E0CC]/50">
+          {eyebrow}
+        </p>
+        <span className="text-[#E1E0CC] opacity-60">*</span>
+      </div>
+
+      <h2 className="text-balance text-[clamp(2.2rem,5.5vw,4.2rem)] font-[450] leading-[0.92] tracking-[-0.05em] text-[#E1E0CC]">
         {title}
       </h2>
+
       {description && (
         <p
           className={cn(
-            "mt-6 text-base leading-relaxed text-primary/60 sm:text-lg",
-            align === "center" && "mx-auto max-w-2xl"
+            "mt-5 max-w-[55ch] text-balance text-[0.95rem] leading-relaxed text-[#E1E0CC]/55 sm:text-[1.05rem]",
+            align === "center" && "mx-auto"
           )}
         >
           {description}

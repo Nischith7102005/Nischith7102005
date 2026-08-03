@@ -2,82 +2,98 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight, Github, Calendar, Box } from "lucide-react";
 import { projects, type Project } from "@/lib/data";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { cn } from "@/lib/utils";
 
-const images: Record<string, string> = {
-  CertiSure: "/images/certisure.jpg",
-  "Monitr-AI": "/images/monitr-ai.jpg",
-  Psymap: "/images/psymap.jpg",
-};
-
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const [open, setOpen] = useState(false);
-  const img = images[project.title];
 
   return (
-    <Reveal delay={index * 0.06}>
+    <Reveal delay={index * 0.04}>
       <article
         className={cn(
-          "group relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/10 bg-white/[0.03] transition-all duration-300 hover:border-primary/25",
-          open && "border-primary/25"
+          "group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-[#E1E0CC]/10 bg-[#111111] transition-all duration-500 hover:border-[#E1E0CC]/20 hover:bg-[#151515]",
+          project.featured && "lg:col-span-1"
         )}
       >
-        <div className="relative aspect-[16/10] overflow-hidden">
-          <Image
-            src={img}
-            alt={`${project.title} project visual`}
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-        </div>
+        {/* Subtle light beam accent */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-60" />
+        <div className="pointer-events-none absolute -top-24 left-1/2 h-48 w-32 -translate-x-1/2 bg-white/5 blur-[40px] opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
 
-        <div className="flex flex-1 flex-col p-7 sm:p-8">
-          <div className="flex items-baseline justify-between gap-4">
-            <h3 className="text-2xl font-medium tracking-[-0.03em] text-primary">
+        {/* Header */}
+        <div className="p-7 sm:p-8">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="grid h-9 w-9 place-items-center rounded-full border border-[#E1E0CC]/10 bg-[#E1E0CC]/5 text-[0.7rem] font-mono text-[#E1E0CC]/60">
+                0{index + 1}
+              </div>
+              {project.featured && (
+                <span className="rounded-full border border-[#E1E0CC]/15 bg-[#E1E0CC]/10 px-2.5 py-1 font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#E1E0CC]/70">
+                  Featured
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="grid h-8 w-8 place-items-center rounded-full border border-[#E1E0CC]/10 bg-[#E1E0CC]/5 text-[#E1E0CC]/50 transition-all hover:border-[#E1E0CC]/20 hover:text-[#E1E0CC]"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              )}
+              {project.year && (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.03] px-2.5 py-1 font-mono text-[0.6rem] text-[#E1E0CC]/40">
+                  <Calendar className="h-3 w-3" /> {project.year}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <h3 className="text-[1.55rem] font-[500] leading-[0.95] tracking-[-0.03em] text-[#E1E0CC] group-hover:text-white transition-colors">
               {project.title}
             </h3>
-            <span className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-primary/40">
-              0{index + 1}
-            </span>
+            <p className="mt-2 flex items-center gap-2 text-sm text-[#E1E0CC]/45">
+              <Box className="h-3.5 w-3.5" /> {project.tagline} · {project.category}
+            </p>
           </div>
-          <p className="mt-1 text-sm text-primary/50">{project.tagline}</p>
-          <p className="mt-4 text-sm leading-relaxed text-primary/60">
+
+          <p className="mt-5 text-[0.95rem] leading-relaxed text-[#E1E0CC]/60">
             {project.description}
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
+          <div className="mt-6 flex flex-wrap gap-1.5">
+            {project.tags.slice(0, 5).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-primary/15 px-3 py-1 text-[0.7rem] text-primary/50"
+                className="rounded-full border border-[#E1E0CC]/10 bg-[#E1E0CC]/[0.04] px-2.5 py-1 text-[0.68rem] tracking-[0.01em] text-[#E1E0CC]/50"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <div className="mt-auto pt-7">
+          <div className="mt-8">
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
-              className="group/btn inline-flex items-center gap-2 self-start rounded-full border border-primary/20 py-1 pl-5 pr-1 text-xs font-medium text-primary transition-all hover:gap-3 hover:border-primary/50 sm:text-sm"
+              className="group/btn inline-flex items-center gap-2 rounded-full border border-[#E1E0CC]/15 bg-[#E1E0CC]/5 py-1 pl-5 pr-1 text-[0.8rem] font-medium tracking-[0.01em] text-[#E1E0CC]/80 backdrop-blur transition-all hover:border-[#E1E0CC]/25 hover:bg-[#E1E0CC]/10 hover:gap-3"
             >
-              {open ? "Show less" : "What I did"}
-              <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-black transition-transform group-hover/btn:scale-110 sm:h-9 sm:w-9">
+              {open ? "Show less" : "Process & outcome"}
+              <span className="grid h-7 w-7 place-items-center rounded-full bg-[#E1E0CC] text-black transition-transform group-hover/btn:scale-110">
                 <motion.span
-                  animate={{ rotate: open ? 45 : 0 }}
+                  animate={{ rotate: open ? 135 : 0 }}
                   transition={{ duration: 0.3 }}
                   className="grid place-items-center"
                 >
-                  <ArrowUpRight className="h-4 w-4" />
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </motion.span>
               </span>
             </button>
@@ -88,21 +104,38 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   className="overflow-hidden"
                 >
-                  <ul className="mt-6 grid gap-3 border-t border-primary/10 pt-6">
+                  <ul className="mt-6 grid gap-3.5 border-t border-[#E1E0CC]/10 pt-6">
                     {project.focus.map((f, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm leading-relaxed text-primary/60">
-                        <span className="mt-[0.1em] font-mono text-primary/50">*</span>
+                      <li
+                        key={i}
+                        className="flex gap-3 text-[0.9rem] leading-relaxed text-[#E1E0CC]/55"
+                      >
+                        <span className="mt-[0.15em] text-[#E1E0CC]/25">↳</span>
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-5 rounded-2xl border border-primary/10 bg-black/40 p-4 text-sm leading-relaxed text-primary/55">
-                    <span className="font-medium text-primary">Outcome — </span>
-                    {project.outcome}
-                  </p>
+                  <div className="mt-5 rounded-[1rem] border border-[#E1E0CC]/10 bg-[#0a0a0a] p-4">
+                    <p className="font-mono text-[0.62rem] uppercase tracking-[0.18em] text-[#E1E0CC]/30">
+                      Outcome
+                    </p>
+                    <p className="mt-2 text-[0.88rem] leading-relaxed text-[#E1E0CC]/60">
+                      {project.outcome}
+                    </p>
+                  </div>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-sm text-[#E1E0CC]/50 hover:text-[#E1E0CC] transition-colors"
+                    >
+                      <Github className="h-4 w-4" /> View code on GitHub <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
@@ -114,20 +147,40 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export function Projects() {
+  const featured = projects.filter((p) => p.featured);
+  const others = projects.filter((p) => !p.featured);
+
   return (
-    <section id="projects" className="relative py-24 md:py-32">
+    <section id="projects" className="relative border-t border-[#E1E0CC]/[0.06] bg-[#0a0a0a] py-24 md:py-32">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="container-x">
         <SectionHeading
-          index="04"
+          index="02"
           eyebrow="Projects"
-          title="Selected work"
-          description="Projects where I combined operations thinking with technology to deliver structure, insight, and decision support."
+          title="Systems where ops meets technology"
+          description="10 projects pulled from real GitHub work — from secure credential platforms and LLM observability to dead-internet archeology and ephemeral encrypted chat. Each line is shipped, documented, and hosted."
         />
 
-        <div className="grid items-stretch gap-6 lg:grid-cols-3">
-          {projects.map((project, i) => (
+        <div className="grid gap-5 md:grid-cols-2">
+          {featured.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}
+        </div>
+
+        <div className="mt-14">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="h-px flex-1 bg-[#E1E0CC]/10" />
+            <span className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-[#E1E0CC]/30">
+              More builds · open source
+            </span>
+            <div className="h-px flex-1 bg-[#E1E0CC]/10" />
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {others.map((project, i) => (
+              <ProjectCard key={project.title} project={project} index={featured.length + i} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
+  index?: string;
   eyebrow: string;
   title: string;
   description?: string;
@@ -12,6 +13,7 @@ interface SectionHeadingProps {
 }
 
 export function SectionHeading({
+  index,
   eyebrow,
   title,
   description,
@@ -25,19 +27,28 @@ export function SectionHeading({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={cn(
-        "mb-14 max-w-3xl",
+        "mb-16 max-w-3xl",
         align === "center" && "mx-auto text-center",
         className
       )}
     >
-      <p className="eyebrow mb-5">{eyebrow}</p>
-      <h2 className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-foreground sm:text-5xl">
+      <p
+        className={cn(
+          "eyebrow mb-5 flex items-center",
+          align === "center" && "justify-center"
+        )}
+      >
+        {index && <span className="text-primary">{index}&nbsp;&nbsp;·&nbsp;&nbsp;</span>}
+        {eyebrow}
+        <span className="ml-3 text-primary">*</span>
+      </p>
+      <h2 className="text-[clamp(2.25rem,6vw,4.5rem)] font-medium leading-[0.95] tracking-[-0.045em] text-primary">
         {title}
       </h2>
       {description && (
         <p
           className={cn(
-            "mt-5 text-lg leading-relaxed text-muted-foreground",
+            "mt-6 text-base leading-relaxed text-primary/60 sm:text-lg",
             align === "center" && "mx-auto max-w-2xl"
           )}
         >

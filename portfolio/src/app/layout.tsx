@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 import { ThemeProviders } from "@/components/ThemeProviders";
-import { FirebaseAnalytics } from "@/components/FirebaseAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nischithr.vercel.app"),
@@ -84,10 +83,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
-        <ThemeProviders>
-          {children}
-          <FirebaseAnalytics />
-        </ThemeProviders>
+        <ThemeProviders>{children}</ThemeProviders>
       </body>
     </html>
   );

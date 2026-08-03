@@ -1,24 +1,3 @@
-import {
-  ChartLine,
-  Cog,
-  Boxes,
-  Briefcase,
-  Building2,
-  Package,
-  Wallet,
-  Compass,
-  Workflow,
-  BarChart3,
-  Blocks,
-  Lightbulb,
-  PenTool,
-  Database,
-  Cloud,
-  Sparkles,
-  Search,
-  type LucideIcon,
-} from "lucide-react";
-
 /* -------------------------------------------------------------------------- */
 /*  Identity                                                                  */
 /* -------------------------------------------------------------------------- */
@@ -64,64 +43,52 @@ export const about = {
 export interface CareerInterest {
   title: string;
   description: string;
-  icon: LucideIcon;
 }
 
 export const careerInterests: CareerInterest[] = [
   {
     title: "Business Analysis",
     description: "Turning business needs into clear requirements, process maps, and actionable solutions.",
-    icon: ChartLine,
   },
   {
     title: "Operations Management",
     description: "Running day-to-day operations so teams deliver predictably, efficiently, and at scale.",
-    icon: Cog,
   },
   {
     title: "Supply Chain & Logistics",
     description: "Coordinating procurement, inventory, and distribution to keep value chains flowing.",
-    icon: Boxes,
   },
   {
     title: "Project & Program Management",
     description: "Planning milestones, coordinating cross-functional teams, and delivering on time.",
-    icon: Briefcase,
   },
   {
     title: "PMO",
     description: "Standardising governance, reporting, and portfolio visibility for program success.",
-    icon: Building2,
   },
   {
     title: "Product Operations",
     description: "Operationalising product decisions with data, workflows, and cross-team alignment.",
-    icon: Package,
   },
   {
     title: "Procurement & Inventory",
     description: "Optimising sourcing, stock levels, and supplier performance to control cost and risk.",
-    icon: Blocks,
   },
   {
     title: "Finance & Business Operations",
     description: "Aligning operational and financial metrics to improve planning and profitability.",
-    icon: Wallet,
   },
   {
     title: "Strategy & Planning",
     description: "Shaping long-term direction, priorities, and roadmaps with structure and evidence.",
-    icon: Compass,
   },
   {
     title: "Process Improvement",
     description: "Mapping, measuring, and redesigning workflows to remove waste and boost throughput.",
-    icon: Workflow,
   },
   {
     title: "Operations Analytics",
     description: "Turning operational data into dashboards, KPIs, and decisions that move outcomes.",
-    icon: BarChart3,
   },
 ];
 
@@ -133,7 +100,6 @@ export interface SkillCategory {
   id: string;
   label: string;
   blurb: string;
-  icon: LucideIcon;
   skills: string[];
 }
 
@@ -142,7 +108,6 @@ export const skillCategories: SkillCategory[] = [
     id: "business",
     label: "Business & Operations",
     blurb: "The core operating disciplines that keep teams aligned and delivering.",
-    icon: Lightbulb,
     skills: [
       "Business Analysis",
       "Operations Management",
@@ -169,7 +134,6 @@ export const skillCategories: SkillCategory[] = [
     id: "data",
     label: "Data & Analytics",
     blurb: "Turning raw information into reporting, insight, and decisions.",
-    icon: Database,
     skills: [
       "SQL",
       "Excel",
@@ -186,7 +150,6 @@ export const skillCategories: SkillCategory[] = [
     id: "cloud",
     label: "Cloud & Deployment",
     blurb: "Shipping, hosting, and operating technology reliably and securely.",
-    icon: Cloud,
     skills: [
       "AWS",
       "Docker",
@@ -204,7 +167,6 @@ export const skillCategories: SkillCategory[] = [
     id: "ai",
     label: "AI & Automation",
     blurb: "Using AI and workflow automation to remove friction and scale effort.",
-    icon: Sparkles,
     skills: [
       "Prompt Engineering",
       "AI-Assisted Research",
@@ -222,7 +184,6 @@ export const skillCategories: SkillCategory[] = [
     id: "research",
     label: "Research",
     blurb: "Synthesising information to inform strategy and decisions.",
-    icon: Search,
     skills: [
       "Technical Research",
       "Internet Research",
@@ -267,7 +228,6 @@ export interface Project {
   focus: string[];
   outcome: string;
   tags: string[];
-  accent: string;
 }
 
 export const projects: Project[] = [
@@ -287,7 +247,6 @@ export const projects: Project[] = [
     outcome:
       "Shipped a structured, well-documented product by aligning stakeholders on requirements and keeping delivery on schedule.",
     tags: ["Project Leadership", "Requirements", "APIs", "Documentation", "Coordination"],
-    accent: "from-brand/20 to-transparent",
   },
   {
     title: "Monitr-AI",
@@ -304,7 +263,6 @@ export const projects: Project[] = [
     outcome:
       "Turned raw operational signals into visible KPIs that help teams spot inefficiency and act on it.",
     tags: ["Operations Analytics", "Dashboards", "KPIs", "AI Monitoring", "Decision Support"],
-    accent: "from-brand/20 to-transparent",
   },
   {
     title: "Psymap",
@@ -321,7 +279,6 @@ export const projects: Project[] = [
     outcome:
       "Provided a clear, visual decision-support layer for planning teams navigating complex information.",
     tags: ["Strategy", "Requirements", "Visualization", "Decision Support"],
-    accent: "from-brand/20 to-transparent",
   },
 ];
 
@@ -334,37 +291,31 @@ export const certifications = [
     title: "AWS Cloud Foundations",
     issuer: "AWS Academy",
     description: "Foundations of cloud concepts, core AWS services, security, and architecture.",
-    icon: Cloud,
   },
   {
     title: "IBM Data & Database Fundamentals",
     issuer: "IBM",
     description: "Core data and database concepts, SQL, and data management fundamentals.",
-    icon: Database,
   },
   {
     title: "Verizon Cloud Platform Job Simulation",
     issuer: "Forage",
     description: "Realistic cloud platform tasks simulating an operations-oriented work environment.",
-    icon: Sparkles,
   },
   {
     title: "Data Analytics (SQL, Excel & Python)",
     issuer: "Certification",
     description: "Practical analytics workflow combining SQL, Excel, and Python for insight.",
-    icon: ChartLine,
   },
   {
     title: "Data Analytics & AI",
     issuer: "Proov",
     description: "Applying analytics and AI techniques to real business and data problems.",
-    icon: PenTool,
   },
   {
     title: "MongoDB",
     issuer: "MongoDB University",
     description: "Document database design, modeling, and querying with MongoDB.",
-    icon: Database,
   },
 ];
 

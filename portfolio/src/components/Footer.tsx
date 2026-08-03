@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container-x flex flex-col items-center justify-between gap-6 py-12 sm:flex-row">
         <div className="text-center sm:text-left">
           <p className="font-display text-lg text-foreground">{identity.name}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{identity.headline}</p>
+          <p className="mt-1 text-sm text-muted-foreground">{identity.location}</p>
         </div>
 
         <div className="flex items-center gap-3">
@@ -38,11 +38,10 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="container-x flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row">
+        <div className="container-x flex items-center justify-center py-6 text-xs text-muted-foreground">
           <p>
             © {new Date().getFullYear()} {identity.name}. All rights reserved.
           </p>
-          <p className="font-mono">Business Operations · Supply Chain · Technology Management</p>
         </div>
       </div>
     </footer>

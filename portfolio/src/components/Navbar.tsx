@@ -94,7 +94,7 @@ export function Navbar() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.05 * i, duration: 0.4 }}
-                    className="font-display text-3xl text-foreground transition-colors hover:text-brand"
+                    className="font-display text-3xl text-foreground transition-colors hover:text-foreground/60"
                   >
                     {item.label}
                   </motion.a>

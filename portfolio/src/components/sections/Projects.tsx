@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { projects, type Project } from "@/lib/data";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
@@ -24,7 +24,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <article
         className={cn(
           "group relative overflow-hidden rounded-3xl border border-border bg-card/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-soft",
-          open && "border-brand/30"
+          open && "border-foreground/20"
         )}
       >
         <div className="relative aspect-[16/9] overflow-hidden">
@@ -36,14 +36,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-          <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full bg-background/70 px-3 py-1 font-mono text-xs backdrop-blur-md">
-            <span className="text-brand">0{index + 1}</span>
-          </div>
         </div>
 
         <div className="p-7">
           <h3 className="font-display text-2xl text-foreground">{project.title}</h3>
-          <p className="mt-1 text-sm font-medium text-brand">{project.tagline}</p>
+          <p className="mt-1 text-sm font-medium text-muted-foreground">{project.tagline}</p>
           <p className="mt-3 leading-relaxed text-muted-foreground">{project.description}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -61,7 +58,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-brand"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-foreground/60"
           >
             {open ? "Show less" : "What I did"}
             <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.3 }}>
@@ -81,9 +78,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                 <ul className="mt-5 grid gap-2.5 border-t border-border pt-5 sm:grid-cols-2">
                   {project.focus.map((f, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-sm text-foreground/85">
-                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-soft text-brand">
-                        <Check className="h-3 w-3" />
-                      </span>
+                      <span className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/60" />
                       {f}
                     </li>
                   ))}
@@ -106,7 +101,7 @@ export function Projects() {
     <section id="projects" className="relative py-28">
       <div className="container-x">
         <SectionHeading
-          eyebrow="05 · Projects"
+          eyebrow="Projects"
           title="Selected work"
           description="Projects where I combined operations thinking with technology to deliver structure, insight, and decision support."
         />

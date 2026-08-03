@@ -5,50 +5,29 @@
 :root {
   --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-jetbrains: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-playfair: "Playfair Display", "Georgia", "Times New Roman", serif;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 9%;
-    --border: 0 0% 90%;
-    --ring: 0 0% 9%;
-    --input: 0 0% 90%;
-    --brand: 0 0% 9%;
-    --brand-soft: 0 0% 96%;
-    --grid: 0 0% 0% / 0.045;
-  }
-
-  .dark {
+    /* Prisma-inspired palette: near-black canvas + warm cream (#E1E0CC) ink */
     --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 13%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 13%;
-    --muted-foreground: 0 0% 62%;
-    --accent: 0 0% 13%;
-    --accent-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --ring: 0 0% 80%;
-    --input: 0 0% 14%;
-    --brand: 0 0% 98%;
-    --brand-soft: 0 0% 14%;
-    --grid: 0 0% 100% / 0.05;
+    --foreground: 58 26% 84%;
+    --card: 0 0% 6%;
+    --card-foreground: 58 26% 84%;
+    --primary: 58 26% 84%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 58 26% 84%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 56 18% 62%;
+    --accent: 0 0% 11%;
+    --accent-foreground: 58 26% 84%;
+    --border: 58 26% 84% / 0.12;
+    --input: 58 26% 84% / 0.12;
+    --ring: 58 26% 84% / 0.4;
+    --brand: 58 26% 84%;
+    --brand-soft: 0 0% 10%;
+    --grid: 58 26% 84% / 0.05;
   }
 }
 
@@ -63,12 +42,13 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    background-color: #0a0a0a;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
   }
 
   ::selection {
-    @apply bg-brand/20 text-foreground;
+    @apply bg-primary text-black;
   }
 
   ::-webkit-scrollbar {
@@ -83,34 +63,21 @@
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--muted-foreground) / 0.4);
+    background: hsl(var(--primary) / 0.35);
   }
 }
 
 @layer components {
-  .glass-card {
-    @apply relative rounded-3xl backdrop-blur-2xl transition-colors;
-    background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow:
-      0 0 0 1px rgba(0, 0, 0, 0.02),
-      0 20px 50px -24px rgba(0, 0, 0, 0.18);
+  /* Film-grain noise texture (used on the hero and overlays) */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
   }
 
-  .dark .glass-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-shadow:
-      0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 24px 60px -30px rgba(0, 0, 0, 0.6);
-  }
-
-  .glass-nav {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(18px) saturate(140%);
-  }
-  .dark .glass-nav {
-    background: rgba(8, 8, 12, 0.65);
+  /* Subtle full-page grain (see layout.tsx) */
+  .page-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 220px 220px;
   }
 
   .hairline {
@@ -127,10 +94,25 @@
   }
 
   .container-x {
-    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
   }
 
   .eyebrow {
-    @apply text-[0.8rem] font-medium uppercase tracking-[0.22em] text-muted-foreground;
+    @apply font-mono text-[0.7rem] font-medium uppercase tracking-[0.28em] text-primary/50;
   }
+}
+
+/* ---------------- Marquee ---------------- */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
 }

@@ -1,18 +1,78 @@
 # Nischith R — Portfolio
 
-A premium, recruiter-focused personal portfolio for **Nischith R**, positioned around
-**Business Operations · Supply Chain · Technology Management**.
+A recruiter-focused personal portfolio for **Nischith R**, positioned around
+**Business Operations · Supply Chain · Technology Management**, rebuilt in the
+aesthetic of the **Prisma** hero design: near-black canvas, warm cream
+(`#E1E0CC`) ink, film-grain noise, giant condensed headlines, pill navigation,
+and pill CTAs with arrow circles.
 
-Built with Next.js (App Router), React, TypeScript, Tailwind CSS, and Framer Motion.
+Built with Next.js (App Router), React, TypeScript, Tailwind CSS, Framer
+Motion, and the standard **shadcn project structure** (`src/components/ui`,
+CSS-variable theming, `cn()` helper, `components.json`).
 
-## Highlights
+## Stack & shadcn support
 
-- Minimal, elegant, agency-quality dark theme with optional light mode
-- Smooth scrolling and subtle Framer Motion reveal animations
-- Plain, statement-first cards (no decorative icon clutter), timeline layout, interactive project cards
-- Fully responsive, SEO-optimized, and accessibility-conscious
-- Single-page sections: Hero, About, Education, Experience, Projects, Skills,
-  Certifications, Career Interests, Contact
+This project supports the shadcn conventions out of the box:
+
+- **TypeScript** — `tsconfig.json` with the `@/*` → `./src/*` path alias.
+- **Tailwind CSS** — `tailwind.config.ts` with `hsl(var(--…))` CSS-variable
+  tokens defined in `src/app/globals.css` (shadcn's theming approach).
+- **`cn()` helper** — `src/lib/utils.ts` (`clsx` + `tailwind-merge`).
+- **`components.json`** — present at the project root, so the shadcn CLI works
+  directly:
+
+  ```bash
+  npx shadcn@latest add button card input
+  ```
+
+  The CLI will place new components into `src/components/ui` (the `ui` alias
+  in `components.json`).
+
+### Why `src/components/ui`?
+
+`components.json` maps `@/components/ui` to `src/components/ui`. The shadcn
+CLI **and** every third-party shadcn-style component (like `prisma-hero.tsx`)
+expect that exact folder, because:
+
+1. It is the convention the shadcn registry generates code against — components
+   ship with imports like `@/components/ui/prisma-hero` baked in.
+2. It keeps reusable primitives in one discoverable place, separate from
+   page-specific components (`src/components/sections`, `src/components/shared`).
+3. Aliases in `tsconfig.json`/`components.json` must match, or pasted components
+   won't resolve their imports.
+
+So: keep reusable/ui components in `src/components/ui`, and don't rename the
+folder or the alias.
+
+## Integrated component: `prisma-hero`
+
+- `src/components/ui/prisma-hero.tsx` — the `PrismaHero` component (plus the
+  exported `WordsPullUp` and `WordsPullUpMultiStyle` animation primitives),
+  copied verbatim from the design reference. It needs `"use client"` because it
+  uses React hooks (`useRef`, `useInView`) and Framer Motion — required in the
+  Next.js App Router.
+- `src/components/ui/demo.tsx` — `DemoOne`, the reference demo.
+- `src/app/demo/page.tsx` — live preview of the raw component at `/demo`
+  (delete this route when you no longer need it).
+
+**Dependencies used by the component:**
+
+```bash
+npm install lucide-react framer-motion
+```
+
+(Both are already in `package.json`.)
+
+The rest of the portfolio reuses the component's design language — the hero
+(`src/components/sections/Hero.tsx`) drives its headline through the exported
+`WordsPullUp` component, with the same noise overlay, gradient, and pill CTA.
+
+**Assets:**
+
+- Hero background: the component's Cloudflare video URL, with an Unsplash
+  poster + automatic image fallback (`onError`) so the hero never renders
+  empty. Swap `HERO_FALLBACK` in `Hero.tsx` for any image you prefer.
+- Project cards keep local images in `public/images/`.
 
 ## Getting started
 
@@ -34,14 +94,16 @@ npm start
 
 ```
 portfolio/
-  public/images/         # hero + project imagery
+  components.json          # shadcn CLI config (ui alias → src/components/ui)
+  public/images/           # project imagery
   src/
-    app/                 # layout, metadata, single-page entry
+    app/                   # layout, metadata, single-page entry, /demo route
     components/
-      sections/          # Hero, About, Education, Experience, Projects, Skills, Certs, Interests, Contact
-      shared/            # Reveal, SectionHeading, ThemeToggle
-      Navbar.tsx, Footer.tsx, ThemeProviders.tsx
-    lib/                 # data.ts (all content), utils.ts
+      ui/                  # shadcn ui components (prisma-hero, demo)
+      sections/            # Hero, About, Education, Experience, Projects, Skills, Certs, Interests, Contact
+      shared/              # Reveal, SectionHeading, Marquee
+      Navbar.tsx, Footer.tsx
+    lib/                   # data.ts (all content), utils.ts
 ```
 
 ## Customizing content
@@ -135,9 +197,3 @@ Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` env vars in CI.
 Because the build is a pure static export, the `out/` folder can also be dropped
 onto **Netlify**, **Vercel**, **GitHub Pages**, or **Firebase Hosting** with no
 changes.
-
-## Analytics
-
-Visitor analytics uses your existing Firebase project (`portfolio-e8340`).
-Once deployed, open the Firebase console → **Analytics** to see traffic in
-real time.

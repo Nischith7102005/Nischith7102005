@@ -11,11 +11,12 @@ export function Skills() {
   const current = skillCategories.find((c) => c.id === active)!;
 
   return (
-    <section id="skills" className="relative py-28">
+    <section id="skills" className="relative py-24 md:py-32">
       <div className="container-x">
         <SectionHeading
+          index="05"
           eyebrow="Skills"
-          title="A toolkit built for operations & technology leadership"
+          title="A toolkit built for operations & technology"
           description="Grouped across the disciplines I use to improve business processes and drive efficiency."
         />
 
@@ -30,8 +31,8 @@ export function Skills() {
               className={cn(
                 "inline-flex items-center rounded-full border px-4 py-2 text-sm transition-all",
                 active === cat.id
-                  ? "border-transparent bg-foreground text-background"
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground"
+                  ? "border-transparent bg-primary font-medium text-black"
+                  : "border-primary/20 text-primary/55 hover:border-primary/40 hover:text-primary"
               )}
             >
               {cat.label}
@@ -46,12 +47,17 @@ export function Skills() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="rounded-3xl border border-border bg-card/50 p-6 sm:p-8"
+            className="rounded-3xl border border-primary/10 bg-white/[0.03] p-6 sm:p-10"
           >
-            <div className="mb-6">
-              <h3 className="font-medium text-foreground">{current.label}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{current.blurb}</p>
+            <div className="mb-1 flex flex-wrap items-baseline justify-between gap-3">
+              <h3 className="text-xl font-medium tracking-[-0.02em] text-primary">
+                {current.label}
+              </h3>
+              <span className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-primary/40">
+                {current.skills.length} skills
+              </span>
             </div>
+            <p className="mb-7 text-sm text-primary/50">{current.blurb}</p>
 
             <ul className="flex flex-wrap gap-2.5">
               {current.skills.map((skill, i) => (
@@ -60,7 +66,7 @@ export function Skills() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.02 * i, duration: 0.3 }}
-                  className="rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground/85 transition-colors hover:border-foreground/40 hover:text-foreground"
+                  className="rounded-full border border-primary/15 bg-black/40 px-4 py-2 text-sm text-primary/70 transition-colors hover:border-primary/40 hover:text-primary"
                 >
                   {skill}
                 </motion.li>

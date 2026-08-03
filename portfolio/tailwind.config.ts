@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -43,11 +42,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains)", "monospace"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        glass: "0 8px 32px 0 rgba(0, 0, 0, 0.25)",
-        soft: "0 20px 50px -20px rgba(0, 0, 0, 0.35)",
+        soft: "0 20px 50px -20px rgba(0, 0, 0, 0.6)",
       },
       backgroundImage: {
         "grid-faint":

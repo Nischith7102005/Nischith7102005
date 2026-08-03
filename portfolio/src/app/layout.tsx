@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
-import { ThemeProviders } from "@/components/ThemeProviders";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nischithr.vercel.app"),
@@ -54,10 +53,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0c" },
-  ],
+  themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({
@@ -66,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -78,12 +74,17 @@ export default function RootLayout({
             Google Fonts load at runtime and fall back to system fonts. */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="font-sans">
-        <ThemeProviders>{children}</ThemeProviders>
+        {/* Subtle full-page film grain, above everything, never blocks input */}
+        <div
+          className="page-noise pointer-events-none fixed inset-0 z-[60] opacity-[0.05] mix-blend-overlay"
+          aria-hidden="true"
+        />
+        {children}
       </body>
     </html>
   );

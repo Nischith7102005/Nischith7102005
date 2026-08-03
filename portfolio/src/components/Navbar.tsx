@@ -38,15 +38,10 @@ export function Navbar() {
         <div className="container-x flex items-center justify-between">
           <a
             href="#top"
-            className="group flex items-center gap-3 text-foreground"
+            className="group flex items-center gap-2 font-medium tracking-tight text-foreground transition-colors hover:text-foreground/80"
             aria-label="Back to top"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-foreground font-mono text-xs font-bold text-background transition-transform group-hover:-rotate-6">
-              NR
-            </span>
-            <span className="hidden font-medium tracking-tight sm:block">
-              Nischith&nbsp;R
-            </span>
+            <span>Nischith&nbsp;R</span>
           </a>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

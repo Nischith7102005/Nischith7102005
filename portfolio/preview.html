@@ -106,7 +106,7 @@
   /* contact */
   .contact-box{border:1px solid var(--border);background:rgba(18,18,22,.5);border-radius:32px;padding:6px;max-width:760px;margin:0 auto}
   .contact-inner{border-radius:30px;padding:44px 40px}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .contact-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px}
   .chan{display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid var(--border);background:rgba(10,10,12,.7);border-radius:16px;padding:20px}
   .chan .l{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
   .chan .v{font-weight:500;font-size:14px;margin-top:2px}
@@ -131,13 +131,12 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="brand">
-      <span class="mark">NR</span>
       <span>Nischith R</span>
     </div>
     <nav class="nav-links">
-      <a href="#about">About</a><a href="#interests">Interests</a><a href="#skills">Skills</a>
-      <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#certifications">Certifications</a>
-      <a href="#education">Education</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a>
+      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a>
+      <a href="#interests">Interests</a><a href="#contact">Contact</a>
     </nav>
     <span class="theme-dot" title="Light/dark toggle">◐</span>
   </div>
@@ -167,7 +166,6 @@
       <div>
         <p>I intentionally chose to study Computer Science and Technology because it sits at the intersection of deep technical knowledge and business, management, entrepreneurship, and operations. My ambition was never traditional software development — it is using technology to solve business problems.</p>
         <p>I care about the systems behind organisations: how processes flow, how information moves between teams, and where automation, analytics, and AI can remove friction and drive measurable efficiency. I enjoy bridging technical and business teams, translating requirements into clear plans, and building the workflows that let companies operate with clarity and speed.</p>
-        <div class="edu-chip"><b>B.Tech in Computer Science and Technology</b> · Dayananda Sagar University · Class of 2027 · CGPA 8.13/10</div>
       </div>
       <div class="pillars">
         <div class="pillar"><h4>Business-first</h4><p>I start from outcomes and constraints, then choose the right technology to move the needle.</p></div>
@@ -179,56 +177,30 @@
   </div>
 </section>
 
-<!-- INTERESTS -->
-<section class="sec" id="interests">
+<!-- EDUCATION -->
+<section class="sec" id="education">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Career Interests</div>
-      <h2>Where I want to make an impact</h2>
-      <p class="desc">The areas where I combine operations, strategy, and technology to solve organisational problems.</p>
+      <div class="eyebrow">Education</div>
+      <h2>Academic background</h2>
     </div>
-    <div class="grid3">
-      <div class="int"><h4>Business Analysis</h4><p>Turning business needs into clear requirements, process maps, and actionable solutions.</p></div>
-      <div class="int"><h4>Operations Management</h4><p>Running day-to-day operations so teams deliver predictably, efficiently, and at scale.</p></div>
-      <div class="int"><h4>Supply Chain &amp; Logistics</h4><p>Coordinating procurement, inventory, and distribution to keep value chains flowing.</p></div>
-      <div class="int"><h4>Project &amp; Program Management</h4><p>Planning milestones, coordinating cross-functional teams, and delivering on time.</p></div>
-      <div class="int"><h4>PMO</h4><p>Standardising governance, reporting, and portfolio visibility for program success.</p></div>
-      <div class="int"><h4>Product Operations</h4><p>Operationalising product decisions with data, workflows, and cross-team alignment.</p></div>
-      <div class="int"><h4>Procurement &amp; Inventory</h4><p>Optimising sourcing, stock levels, and supplier performance to control cost and risk.</p></div>
-      <div class="int"><h4>Finance &amp; Business Operations</h4><p>Aligning operational and financial metrics to improve planning and profitability.</p></div>
-      <div class="int"><h4>Strategy &amp; Planning</h4><p>Shaping long-term direction, priorities, and roadmaps with structure and evidence.</p></div>
-      <div class="int"><h4>Process Improvement</h4><p>Mapping, measuring, and redesigning workflows to remove waste and boost throughput.</p></div>
-      <div class="int"><h4>Operations Analytics</h4><p>Turning operational data into dashboards, KPIs, and decisions that move outcomes.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="sec" id="skills">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Skills</div>
-      <h2>A toolkit built for operations &amp; technology leadership</h2>
-    </div>
-    <div class="skill-tabs">
-      <button class="on">Business &amp; Operations</button>
-      <button>Data &amp; Analytics</button>
-      <button>Cloud &amp; Deployment</button>
-      <button>AI &amp; Automation</button>
-      <button>Research</button>
-    </div>
-    <div class="skill-panel">
-      <div class="skill-head">
-        <div><h4>Business &amp; Operations</h4><p>The core operating disciplines that keep teams aligned and delivering.</p></div>
+    <div class="tl"><div class="item" style="margin-top:0">
+      <div class="dot"></div>
+      <div class="head">
+        <div>
+          <div class="eyebrow" style="margin-bottom:8px">2023 – 2027</div>
+          <h3>B.Tech in Computer Science and Technology</h3>
+          <div class="uni">Dayananda Sagar University</div>
+          <div class="where">Bengaluru, Karnataka, India</div>
+        </div>
+        <div class="gpa"><div class="n">8.13 / 10</div><div class="l">CGPA</div></div>
       </div>
-      <div class="chips">
-        <span>Business Analysis</span><span>Operations Management</span><span>Process Improvement</span><span>Project Coordination</span>
-        <span>Requirements Gathering</span><span>Process Mapping</span><span>Workflow Optimization</span><span>Stakeholder Communication</span>
-        <span>Gap Analysis</span><span>Strategic Planning</span><span>KPI Reporting</span><span>Operations Analytics</span>
-        <span>Inventory Tracking</span><span>Business Communication</span><span>Cross-functional Collaboration</span><span>Technical Documentation</span>
-        <span>Sprint Planning</span><span>Milestone Tracking</span><span>Task Management</span>
-      </div>
-    </div>
+      <ul class="det">
+        <li>Core Coursework: Database Management Systems, Data Structures, Cloud Computing, Operations &amp; Systems Analysis</li>
+        <li>Specialized focus on process optimization, supply chain analytics, and technical project management</li>
+        <li>Engaged in hands-on technical simulations, hackathons, and industry certification tracks</li>
+      </ul>
+    </div></div>
   </div>
 </section>
 
@@ -275,7 +247,7 @@
         <div class="img"><img src="public/images/certisure.jpg" alt=""/><div class="sh"></div></div>
         <div class="body">
           <h4>CertiSure</h4><div class="tag">Credential verification platform</div>
-          <p class="desc">Led planning and delivery of a platform that verifies and manages digital credentials, coordinating stakeholders and translating needs into a technical plan.</p>
+          <p class="desc">Led the planning and delivery of a platform that verifies and manages digital credentials, coordinating stakeholders and translating business needs into a clear technical plan.</p>
           <div class="tags"><span>Project Leadership</span><span>Requirements</span><span>APIs</span><span>Documentation</span><span>Coordination</span></div>
         </div>
       </div>
@@ -299,6 +271,31 @@
   </div>
 </section>
 
+<!-- SKILLS -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Skills</div>
+      <h2>A toolkit built for operations &amp; technology leadership</h2>
+    </div>
+    <div class="skill-tabs">
+      <button class="on">Business &amp; Operations</button>
+      <button>Data &amp; Analytics</button>
+      <button>Cloud &amp; Deployment</button>
+      <button>AI &amp; Automation</button>
+      <button>Research &amp; Strategy</button>
+    </div>
+    <div class="skill-panel">
+      <div class="skill-head">
+        <div><h4>Business &amp; Operations</h4><p>The core operating disciplines that keep teams aligned and delivering.</p></div>
+      </div>
+      <div class="chips">
+        <span>Requirements Engineering</span><span>Process Mapping &amp; BPMN</span><span>Workflow Optimization</span><span>Gap &amp; Root Cause Analysis</span><span>KPI &amp; Metrics Benchmarking</span><span>Sprint &amp; Milestone Planning</span><span>Stakeholder Alignment</span><span>Risk &amp; Resource Management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CERTIFICATIONS -->
 <section class="sec" id="certifications">
   <div class="wrap">
@@ -317,30 +314,22 @@
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section class="sec" id="education">
+<!-- INTERESTS -->
+<section class="sec" id="interests">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Education</div>
-      <h2>Academic background</h2>
+      <div class="eyebrow">Career Interests</div>
+      <h2>Where I want to make an impact</h2>
+      <p class="desc">The areas where I combine operations, strategy, and technology to solve organisational problems.</p>
     </div>
-    <div class="tl"><div class="item" style="margin-top:0">
-      <div class="dot"></div>
-      <div class="head">
-        <div>
-          <div class="eyebrow" style="margin-bottom:8px">2023 – 2027</div>
-          <h3>B.Tech in Computer Science and Technology</h3>
-          <div class="uni">Dayananda Sagar University</div>
-          <div class="where">Bengaluru, Karnataka, India</div>
-        </div>
-        <div class="gpa"><div class="n">8.13 / 10</div><div class="l">CGPA</div></div>
-      </div>
-      <ul class="det">
-        <li>Focused on applying computing to business, operations, and analytics</li>
-        <li>Combined technical coursework with management, entrepreneurship, and operations thinking</li>
-        <li>Built hands-on projects spanning analytics, automation, AI, and process improvement</li>
-      </ul>
-    </div></div>
+    <div class="grid3">
+      <div class="int"><h4>Business &amp; Operations Analysis</h4><p>Translating business needs into clear requirements, process maps, and actionable solutions.</p></div>
+      <div class="int"><h4>Supply Chain &amp; Logistics</h4><p>Coordinating procurement, inventory control, and distribution networks to keep value chains flowing.</p></div>
+      <div class="int"><h4>Project Management &amp; PMO</h4><p>Planning delivery milestones, coordinating cross-functional teams, and standardising governance.</p></div>
+      <div class="int"><h4>Product &amp; Technology Operations</h4><p>Operationalising technology and AI deployments with workflows, data, and cross-team alignment.</p></div>
+      <div class="int"><h4>Strategy &amp; Process Improvement</h4><p>Mapping, measuring, and redesigning workflows to remove waste and improve organizational throughput.</p></div>
+      <div class="int"><h4>Operations Analytics</h4><p>Turning raw operational signals into dashboards, KPIs, and evidence-based decision support.</p></div>
+    </div>
   </div>
 </section>
 
@@ -358,10 +347,9 @@
           <div class="chan"><div><div class="l">Email</div><div class="v">nischith.7102005@gmail.com</div></div><span class="arr">↗</span></div>
           <div class="chan"><div><div class="l">LinkedIn</div><div class="v">linkedin.com/in/nischith-r</div></div><span class="arr">↗</span></div>
           <div class="chan"><div><div class="l">GitHub</div><div class="v">github.com/Nischith7102005</div></div><span class="arr">↗</span></div>
-          <div class="chan"><div><div class="l">Location</div><div class="v">Bengaluru, Karnataka, India</div></div></div>
         </div>
         <div class="cta-wrap">
-          <a href="#" class="btn btn-fill">Send a message →</a>
+          <a href="mailto:nischith.7102005@gmail.com?subject=Opportunity%20for%20Nischith%20R" class="btn btn-fill">Send a message →</a>
           <p style="color:var(--muted);font-size:14px;margin-top:16px">Typically happy to talk about operations, supply chain, analytics, and AI roles.</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { about, identity } from "@/lib/data";
+import { about } from "@/lib/data";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 
@@ -40,12 +40,6 @@ export function About() {
                   {p}
                 </p>
               ))}
-              <div className="rounded-2xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
-                <span className="font-medium text-foreground">{identity.degree}</span>
-                {" · "}
-                {identity.university} · Class of {identity.graduationYear} · CGPA{" "}
-                {identity.cgpa}/10
-              </div>
             </div>
           </Reveal>
 

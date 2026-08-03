@@ -8,8 +8,8 @@ Built with Next.js (App Router), React, TypeScript, Tailwind CSS, and Framer Mot
 ## Highlights
 
 - Minimal, elegant, agency-quality dark theme with optional light mode
-- Glassmorphism used sparingly, smooth scrolling, subtle Framer Motion animations
-- Animated counters, timeline layouts, skill cards with icons, interactive project cards
+- Smooth scrolling and subtle Framer Motion reveal animations
+- Plain, statement-first cards (no decorative icon clutter), timeline layout, interactive project cards
 - Fully responsive, SEO-optimized, and accessibility-conscious
 - Single-page sections: Hero, About, Career Interests, Skills, Experience, Projects,
   Certifications, Education, Contact
@@ -39,7 +39,7 @@ portfolio/
     app/                 # layout, metadata, single-page entry
     components/
       sections/          # Hero, About, Interests, Skills, Experience, Projects, Certs, Education, Contact
-      shared/            # Reveal, Counter, SectionHeading, ThemeToggle
+      shared/            # Reveal, SectionHeading, ThemeToggle
       Navbar.tsx, Footer.tsx, ThemeProviders.tsx
     lib/                 # data.ts (all content), utils.ts
 ```
@@ -49,51 +49,53 @@ portfolio/
 Edit `src/lib/data.ts` — all personal information, skills, projects, experience,
 certifications, and education live there.
 
-## Deployment — Firebase Hosting
+## Deployment — Cloudflare Pages
 
-The site is configured for **Firebase Hosting** as a fully static export
-(`next build` outputs plain HTML/CSS/JS into `out/` — no server required).
+The site is a fully static export (`next build` outputs plain HTML/CSS/JS into
+`out/` — no server required), so it deploys to **Cloudflare Pages** in two ways:
 
-### 1. Install the Firebase CLI (already a dev dependency)
+### Option A — Git integration (recommended)
 
-```bash
-npm install
-```
+In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**,
+pick this repo, then set:
 
-### 2. Log in once
+- **Framework preset**: None (or Next.js)
+- **Root directory**: `portfolio`
+- **Build command**: `npm run build`
+- **Build output directory**: `out`
 
-```bash
-npx firebase login
-```
+Every push to the connected branch deploys automatically.
 
-This opens your browser to authorize Firebase with your Google account. It only
-needs to be done once per machine.
+### Option B — Wrangler CLI (any CI/CD)
 
-### 3. Deploy
-
-```bash
-npm run deploy        # builds + deploys to production (portfolio-e8340)
-```
-
-Or get a shareable **preview URL** before going live:
+`wrangler.jsonc` in this folder configures wrangler as a **static Pages
+project** (project name `portfolio`, output dir `out`). Deploy with the Pages
+command — `wrangler deploy` will warn that Pages projects need it:
 
 ```bash
-npm run deploy:preview
+npm run deploy        # = npm run build && npx wrangler pages deploy out
 ```
+
+If your Pages project has a different name in the dashboard, pass it explicitly:
+
+```bash
+npx wrangler pages deploy out --project-name <your-project-name>
+```
+
+Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` env vars in CI.
 
 ### What the config does
 
-- `firebase.json` — hosting config: serves the `out/` folder, sets long-lived
-  cache headers for static assets, and rewrites all routes to `index.html`.
-- `.firebaserc` — pins the deploy to the `portfolio-e8340` project.
-- `src/lib/firebase.ts` + `FirebaseAnalytics.tsx` — initializes **Firebase
-  Analytics** (measurementId `G-YC8H31YN9E`) in the browser to track visits.
-  It silently no-ops where analytics is unavailable.
+- `wrangler.jsonc` — pins the Pages project name (`portfolio`) and the build
+  output directory (`out`).
+- `public/_headers` — Cloudflare Pages headers: long-lived, immutable caching
+  for hashed JS/CSS and images; `no-cache` for HTML.
+- `next.config.ts` — `output: "export"` produces the static `out/` folder.
 
 ### Other hosts
 
 Because the build is a pure static export, the `out/` folder can also be dropped
-onto **Netlify**, **Vercel**, **GitHub Pages**, or **Cloudflare Pages** with no
+onto **Netlify**, **Vercel**, **GitHub Pages**, or **Firebase Hosting** with no
 changes.
 
 ## Analytics

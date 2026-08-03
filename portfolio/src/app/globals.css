@@ -25,8 +25,8 @@
     --border: 0 0% 90%;
     --ring: 0 0% 9%;
     --input: 0 0% 90%;
-    --brand: 245 60% 55%;
-    --brand-soft: 245 60% 96%;
+    --brand: 0 0% 9%;
+    --brand-soft: 0 0% 96%;
     --grid: 0 0% 0% / 0.045;
   }
 
@@ -46,8 +46,8 @@
     --border: 0 0% 18%;
     --ring: 0 0% 80%;
     --input: 0 0% 14%;
-    --brand: 245 60% 72%;
-    --brand-soft: 245 60% 14%;
+    --brand: 0 0% 98%;
+    --brand-soft: 0 0% 14%;
     --grid: 0 0% 100% / 0.05;
   }
 }
@@ -131,6 +131,6 @@
   }
 
   .eyebrow {
-    @apply font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground;
+    @apply text-[0.8rem] font-medium uppercase tracking-[0.22em] text-muted-foreground;
   }
 }

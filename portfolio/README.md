@@ -57,17 +57,17 @@ The site is a fully static export (`next build` outputs plain HTML/CSS/JS into
 
 ## Deploying to Vercel
 
-`vercel.json` in this folder makes the project self-configuring on Vercel —
-the build command (`npm run build`) and output directory (`out`) are already
-set, so there is nothing to change in the dashboard.
+`vercel.json` in this folder configures caching headers and explicit build command for Vercel.
+
+> **Important note on Output Directory:** When deploying a Next.js project to Vercel, Vercel's build pipeline (`@vercel/next`) automatically detects `output: "export"` and reads `routes-manifest.json` and build metadata from Next.js's default distribution directory (`.next`). Do **not** set **Output Directory** to `out` in `vercel.json` or in the Vercel dashboard — leave it at the Vercel/Next.js default (`.next`), otherwise Vercel will fail with `Error: The file ".../out/routes-manifest.json" couldn't be found`.
 
 ### Git integration (recommended)
 
 1. In Vercel: **Add New → Project → Import** this GitHub repo.
 2. Set **Root Directory** to `portfolio` (Vercel detects the Next.js project
    there automatically).
-3. Vercel reads `vercel.json` and uses `npm run build` + output dir `out`.
-   Deploy.
+3. Ensure **Build Command** is `npm run build` and **Output Directory** is left at default (`.next`, do not override to `out`).
+4. Deploy.
 
 Every push to the connected branch deploys automatically.
 
@@ -82,59 +82,15 @@ Requires `VERCEL_TOKEN` (or `vercel login`) in CI.
 
 ### What the config does
 
-- `vercel.json` — sets `buildCommand: npm run build`, `outputDirectory: out`,
-  and long-lived immutable `Cache-Control` for `/images/*` and `/_next/static/*`
-  (matching the Cloudflare Pages `_headers` rules).
-- `next.config.ts` — `output: "export"` produces the static `out/` folder, so
-  Vercel serves it as a pure static site.
+- `vercel.json` — sets `buildCommand: npm run build` and long-lived immutable
+  `Cache-Control` headers for `/images/*` and `/_next/static/*` (matching the
+  Cloudflare Pages `_headers` rules).
+- `next.config.ts` — `output: "export"` produces the static export automatically
+  detected by Vercel's Next.js builder.
 
 ## Deploying to Cloudflare Pages
 
 Two ways:
-
-### Option A — Git integration (recommended)
-
-In the Cloudflare dashboard: **Workers & Pages → Create → Pages → Connect to Git**,
-pick this repo, then set:
-
-- **Framework preset**: None (or Next.js)
-- **Root directory**: `portfolio`
-- **Build command**: `npm run build`
-- **Build output directory**: `out`
-
-Every push to the connected branch deploys automatically.
-
-### Option B — Wrangler CLI (any CI/CD)
-
-`wrangler.jsonc` in this folder configures wrangler as a **static Pages
-project** (project name `portfolio`, output dir `out`). Deploy with the Pages
-command — `wrangler deploy` will warn that Pages projects need it:
-
-```bash
-npm run deploy        # = npm run build && npx wrangler pages deploy out
-```
-
-If your Pages project has a different name in the dashboard, pass it explicitly:
-
-```bash
-npx wrangler pages deploy out --project-name <your-project-name>
-```
-
-Requires `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` env vars in CI.
-
-### What the config does
-
-- `wrangler.jsonc` — pins the Pages project name (`portfolio`) and the build
-  output directory (`out`).
-- `public/_headers` — Cloudflare Pages headers: long-lived, immutable caching
-  for hashed JS/CSS and images; `no-cache` for HTML.
-- `next.config.ts` — `output: "export"` produces the static `out/` folder.
-
-### Other hosts
-
-Because the build is a pure static export, the `out/` folder can also be dropped
-onto **Netlify** or **GitHub Pages** with no changes (GitHub Pages needs a
-`.nojekyll` file and a `basePath` if served from a subpath).
 
 ### Option A — Git integration (recommended)
 

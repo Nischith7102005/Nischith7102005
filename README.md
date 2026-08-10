@@ -90,16 +90,6 @@ Designed dashboards for non-technical stakeholders and created the **Cognitive W
 
 ---
 
-## GitHub Snapshot
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nischith7102005&show_icons=true&hide_border=true&bg_color=060d1a&title_color=89a7c2&text_color=b8c7d6&icon_color=89a7c2&include_all_commits=true&count_private=true" height="160" width="49%"/>
-  &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Nischith7102005&hide_border=true&background=060d1a&stroke=0b1628&ring=89a7c2&fire=89a7c2&currStreakLabel=89a7c2&sideLabels=89a7c2&currStreakNum=ffffff&sideNums=ffffff&dates=89a7c2" height="160" width="49%"/>
-</div>
-
----
-
 ## Education
 
 **B.Tech — Computer Science and Technology**  

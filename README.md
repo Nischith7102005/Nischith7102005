@@ -1,15 +1,128 @@
-#  About Me:
-# Hi there, I'm Nischith R 👋<br><br> B.Tech Computer Science & Technology student at Dayananda Sagar University (Graduating 2027)<br><br>📍 Bangalore, India<br><br>I'm passionate about using data and AI to solve real-world problems. My interests lie in Data Analytics, Artificial Intelligence, Cloud Computing, and workflow automation. I enjoy building projects that combine technical implementation with practical business impact, while continuously expanding my skills through hands-on projects, certifications, and real-world simulations.
+<div align="center">
+  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="200"/>
+</div>
 
+# Hi there 👋, I'm Nischith R
+### Business Operations · Supply Chain · Technology Management
 
-##  Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nischith-r-857669296) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:nischith.7102005@gmail.com) 
+<div align="center">
+  <a href="mailto:nischith.7102005@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="tel:+918792881313"><img src="https://img.shields.io/badge/Phone-2CA5E0?style=for-the-badge&logo=android&logoColor=white" alt="Phone"/></a>
+  <a href="https://linkedin.com/in/nischith-r-857669296" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://github.com/Nischith7102005" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  <img src="https://img.shields.io/badge/Location-Bengaluru%2C%20India-blue?style=for-the-badge&logo=map-marker" alt="Location"/>
+</div>
 
-#  Tech Stack:
-![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![OpenStack](https://img.shields.io/badge/Openstack-%23f01742.svg?style=for-the-badge&logo=openstack&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white) ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101) ![Snowflake](https://img.shields.io/badge/snowflake-%2329B5E8.svg?style=for-the-badge&logo=snowflake&logoColor=white) ![Three js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) ![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) ![TOR](https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white) ![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)
-#  GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=Nischith7102005&theme=dark&hide_border=true&include_all_commits=false&count_private=false)<br/>
-![](https://streak-stats.demolab.com/?user=Nischith7102005&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=Nischith7102005&theme=dark&hide_border=true&include_all_commits=false&count_private=false&layout=compact)
+---
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+###  About Me
+I am a B.Tech Computer Science graduate with a strong focus on **Business Operations, Supply Chain, and Technology Management**. I bridge the gap between technical execution and business strategy, specializing in workflow optimization, data analytics, and cloud deployment.
+
+---
+
+### 💻 Tech Stack & Competencies
+
+<table>
+  <tr>
+    <td valign="top" width="50%">
+      <h3>☁️ Cloud & Deployment</h3>
+      <p>
+        <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white"/>
+        <img src="https://img.shields.io/badge/GitHub%20Actions-%232671E5.svg?style=for-the-badge&logo=github-actions&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Render-%23000000.svg?style=for-the-badge&logo=render&logoColor=white"/>
+      </p>
+
+      <h3>📊 Data & Analytics</h3>
+      <p>
+        <img src="https://img.shields.io/badge/SQL-%2307405e.svg?style=for-the-badge&logo=postgresql&logoColor=white"/>
+        <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Excel-%23217346.svg?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
+        <img src="https://img.shields.io/badge/dbt-%23FF694B.svg?style=for-the-badge&logo=dbt&logoColor=white"/>
+      </p>
+    </td>
+    <td valign="top" width="50%">
+      <h3>🤖 AI & Automation</h3>
+      <p>
+        <img src="https://img.shields.io/badge/n8n-%23EA4B71.svg?style=for-the-badge&logo=n8n&logoColor=white"/>
+        <img src="https://img.shields.io/badge/REST%20API-%23005571.svg?style=for-the-badge&logo=rest&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Prompt%20Engineering-%23000000.svg?style=for-the-badge"/>
+      </p>
+
+      <h3>️ PM & Ops Tools</h3>
+      <p>
+        <img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Jira-%230052CC.svg?style=for-the-badge&logo=Jira&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=for-the-badge&logo=linux&logoColor=black"/>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🏆 Experience
+
+**Technology Intern** | **Humans Care Foundation**
+*📍 Bengaluru, Karnataka*
+*   Coordinated chatbot development and data visualization projects across a cross-functional team.
+*   Managed end-to-end project documentation and task assignments using **Notion & GitHub**.
+*   Identified workflow bottlenecks, improving team execution efficiency during active sprints.
+
+---
+
+### 🚀 Featured Projects
+
+#### 1. CertiSure — Digital Certificate Verification Platform
+**Role:** Team Lead, Backend & Integration | **Team Size:** 5
+*   Led end-to-end project coordination: sprint planning, task allocation, and dependency tracking.
+*   Gathered stakeholder requirements and translated them into technical specifications and API docs.
+*   Maintained full project documentation suite including architecture diagrams and audit log designs.
+
+#### 2. Monitr-AI — AI System Performance Monitoring Dashboard
+**Role:** Operations & Analytics Project
+*   Defined operational requirements and designed dashboards to surface AI model performance metrics.
+*   Developed the **Cognitive Waste Index** framework to quantify process inefficiencies.
+*   Translated complex technical data into clear reporting views for business stakeholders.
+
+#### 3. Psymap (Mind Brain Map) — Content Intelligence Tool
+**Role:** Requirements Design & Strategy
+*   Defined user requirements for a multi-source content analysis platform.
+*   Delivered interactive network visualizations enabling intuitive exploration of content relationships.
+
+---
+
+### 🎓 Education
+
+**B.Tech — Computer Science and Technology**
+**Dayananda Sagar University**
+*   **CGPA:** 8.13 / 10.0
+*   **Coursework:** Software Engineering, Project Management, Database Systems, Business Communication, Operations Management.
+
+---
+
+### 📜 Certifications
+*   **Data Analytics:** SQL, Excel & Python (Great Learning)
+*   **Cloud Platform Job Simulation:** Verizon (Forage)
+*   **Data Analytics & AI:** Proov
+*   **AWS Cloud Foundations:** Amazon Web Services
+*   **NoSQL Databases (MongoDB):** Simplilearn
+
+---
+
+### 📊 GitHub Stats
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Nischith7102005&show_icons=true&theme=radical&count_private=true" height="150" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Nischith7102005&theme=radical" height="150" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://profile-counter.glitch.me/Nischith7102005/count.svg?"  />
+</div>

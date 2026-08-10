@@ -29,10 +29,10 @@ export const about = {
     "Today I bring together business analysis, operations, supply chain thinking, project coordination, and operations analytics to improve how work gets done — and I am always learning how new technology can make business outcomes better.",
   ],
   stats: [
-    { label: "CGPA", value: "8.13", suffix: "/10", decimals: 2 },
-    { label: "Graduation Year", value: "2027", suffix: "", decimals: 0 },
-    { label: "Projects Delivered", value: "12", suffix: "+", decimals: 0 },
-    { label: "Certifications", value: "6", suffix: "+", decimals: 0 },
+    { label: "CGPA", value: "8.13", suffix: "/10" },
+    { label: "Graduation Year", value: "2027", suffix: "" },
+    { label: "Projects Delivered", value: "12", suffix: "+" },
+    { label: "Certifications", value: "6", suffix: "+" },
   ],
 };
 
@@ -191,7 +191,8 @@ export const experience = [
 ];
 
 /* -------------------------------------------------------------------------- */
-/*  Projects - Merged from all GitHub repos                                   */
+/*  Projects - Filtered: removed abysslink, seance search, keyhound 2.0,      */
+/*  excel file validator                                                      */
 /* -------------------------------------------------------------------------- */
 
 export interface Project {
@@ -232,16 +233,16 @@ export const projects: Project[] = [
     title: "GreenMind",
     tagline: "Smart greenhouse management",
     description:
-      "Full-stack smart agriculture platform with parallax greenhouse storytelling, IoT sensor simulation, and AI-driven grow recommendations. Firebase Auth enabled.",
+      "Full-stack smart agriculture platform with IoT sensor simulation and AI-driven grow recommendations. Firebase Auth enabled.",
     focus: [
-      "Built responsive hero with parallax greenhouse images and sticky stacking cards",
+      "Built responsive dashboard with greenhouse metrics and plant health tracking",
       "Implemented Firebase Auth (email/password) with persistent sessions",
       "Designed How-It-Works: Connect → Monitor → Optimize flow",
       "Production build: single-file optimized dist with inlined assets",
     ],
     outcome:
       "Delivered a visually rich, authenticated product experience showing Smart Sensing, AI Insights, Predictive Guard, and AI Companion modules.",
-    tags: ["TypeScript", "React", "Firebase", "Parallax", "IoT"],
+    tags: ["TypeScript", "React", "Firebase", "IoT"],
     github: "https://github.com/Nischith7102005/Greenmind",
     year: "2024",
     featured: true,
@@ -267,25 +268,6 @@ export const projects: Project[] = [
     category: "AI / Data Ops",
   },
   {
-    title: "Séance Search",
-    tagline: "Desktop necromancer for dead internet",
-    description:
-      "Excavates the dead web: searches Wayback Machine CDX for real 404 URLs, then uses AI to channel the voice of each dead site. Electron desktop + web app.",
-    focus: [
-      "Queried Internet Archive CDX API across multi-strategy dead URL discovery",
-      "Built era detector: GeoCities, LiveJournal, Flash Portal, Failed Startup classification",
-      "Implemented AI channeling via OpenRouter (gemma-3-12b + fallback) with persistent Grimoire",
-      "Created GSAP + Canvas ink brush intro animation and ectoplasm rating system",
-    ],
-    outcome:
-      "Transformed archival search into narrative experience where ghosts remember prior summonings with Wayback deep links.",
-    tags: ["Electron", "Wayback", "OpenRouter", "SQLite", "GSAP"],
-    github: "https://github.com/Nischith7102005/seance-search",
-    year: "2024",
-    featured: true,
-    category: "AI / Creative Tech",
-  },
-  {
     title: "PsyMap — Mind Brain Map",
     tagline: "Content intelligence & psychological patterns",
     description:
@@ -303,44 +285,6 @@ export const projects: Project[] = [
     year: "2024",
     featured: true,
     category: "Data Viz / Strategy",
-  },
-  {
-    title: "AbyssLink",
-    tagline: "Ephemeral encrypted chat",
-    description:
-      "Zero-persistence, invite-only, end-to-end encrypted chat. No accounts, no tracking, 24h auto-destruct rooms. Browser-encrypted via AES-GCM + PBKDF2.",
-    focus: [
-      "Architected in-memory only backend: secrets exist only during runtime",
-      "Implemented client-side E2E encryption, bcrypt room password hash never plaintext",
-      "Hardened with rate limiting, input sanitization, strict CSP, zero logs",
-      "Hosted-only design: Vercel frontend + Render Docker backend, no local mode by intent",
-    ],
-    outcome:
-      "Delivered absolute anonymity baseline where server never sees plaintext and rooms vanish permanently after expiry.",
-    tags: ["Security", "E2E Encryption", "Zero-Trust", "Vercel", "Render"],
-    github: "https://github.com/Nischith7102005/abysslink",
-    year: "2024",
-    featured: true,
-    category: "Security / Privacy",
-  },
-  {
-    title: "KeyHound 2.0",
-    tagline: "AI-powered security scanner",
-    description:
-      "Enterprise security scanning platform: credential leaks, PII, vulnerabilities, misconfig detection. Subscription tiers, Stripe, Supabase RLS, compliance mapping.",
-    focus: [
-      "Designed 9-table PostgreSQL schema with RLS policies, triggers, and compliance frameworks pre-loaded",
-      "Integrated Stripe checkout, billing portal, webhooks, JWT + Firebase Admin auth",
-      "Built Groq AI integration for severity classification, remediation generation, compliance mapping",
-      "Implemented tier enforcement: Free 10 scans, Pro unlimited, Enterprise SSO/SIEM/on-prem",
-    ],
-    outcome:
-      "Shipped foundation covering DB, payments, auth, AI analysis with 85% test pass, ready for deep crawling and team collaboration.",
-    tags: ["TypeScript", "Groq AI", "Supabase", "Stripe", "Security"],
-    github: "https://github.com/Nischith7102005/keyhound",
-    year: "2024",
-    featured: false,
-    category: "Security / SaaS",
   },
   {
     title: "LaTeX Plagiarism Suite",
@@ -379,25 +323,6 @@ export const projects: Project[] = [
     year: "2023",
     featured: false,
     category: "AI / Data",
-  },
-  {
-    title: "Excel File Validator",
-    tagline: "Streamlit validation pipeline",
-    description:
-      "Streamlit-based web app built in Python: uploads Excel files, validates data, returns downloadable file with validation results. CLI + web run.",
-    focus: [
-      "Core validation logic separate from Streamlit UI for testability",
-      "Upload and validate Excel files with detailed per-row error reporting",
-      "Download validated results with clear pass/fail markers",
-      "Sample data + requirements included for zero-friction onboarding",
-    ],
-    outcome:
-      "Reduced manual Excel QA effort by automating collection, validation, and reporting in a simple UI.",
-    tags: ["Python", "Streamlit", "Data QA", "Excel"],
-    github: "https://github.com/Nischith7102005/excelfilevalidator",
-    year: "2023",
-    featured: false,
-    category: "Data / Automation",
   },
 ];
 
@@ -466,10 +391,10 @@ export const education = {
 
 export const nav = [
   { label: "About", href: "#about" },
-  { label: "Education", href: "#education" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Education", href: "#education" },
   { label: "Certifications", href: "#certifications" },
   { label: "Interests", href: "#interests" },
   { label: "Contact", href: "#contact" },

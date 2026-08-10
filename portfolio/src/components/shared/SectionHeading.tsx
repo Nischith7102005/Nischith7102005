@@ -1,10 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
-  index?: string;
   eyebrow: string;
   title: string;
   description?: string;
@@ -13,7 +9,6 @@ interface SectionHeadingProps {
 }
 
 export function SectionHeading({
-  index,
   eyebrow,
   title,
   description,
@@ -21,45 +16,34 @@ export function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      className={cn("mb-14 max-w-3xl md:mb-20", align === "center" && "mx-auto text-center", className)}
+    <div
+      className={cn(
+        "mb-12 max-w-[720px] md:mb-16",
+        align === "center" && "mx-auto text-center",
+        className
+      )}
     >
-      <div
+      <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+        {eyebrow}
+      </p>
+      <h2
         className={cn(
-          "mb-6 flex items-center gap-3",
-          align === "center" && "justify-center"
+          "mt-3 text-balance text-[28px] font-semibold leading-[1.1] tracking-[-0.02em] text-foreground sm:text-[36px] md:text-[42px]",
+          align === "center" && "mx-auto"
         )}
       >
-        {index && (
-          <span className="font-mono text-[0.7rem] tracking-[0.2em] text-[#E1E0CC]/40">
-            {index}
-          </span>
-        )}
-        {index && <span className="h-px w-8 bg-[#E1E0CC]/15" />}
-        <p className="font-mono text-[0.7rem] uppercase tracking-[0.26em] text-[#E1E0CC]/50">
-          {eyebrow}
-        </p>
-        <span className="text-[#E1E0CC] opacity-60">*</span>
-      </div>
-
-      <h2 className="text-balance text-[clamp(2.2rem,5.5vw,4.2rem)] font-[450] leading-[0.92] tracking-[-0.05em] text-[#E1E0CC]">
         {title}
       </h2>
-
       {description && (
         <p
           className={cn(
-            "mt-5 max-w-[55ch] text-balance text-[0.95rem] leading-relaxed text-[#E1E0CC]/55 sm:text-[1.05rem]",
+            "mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted sm:text-[16px]",
             align === "center" && "mx-auto"
           )}
         >
           {description}
         </p>
       )}
-    </motion.div>
+    </div>
   );
 }

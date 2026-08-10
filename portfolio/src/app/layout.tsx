@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nischith R — Business Operations · Supply Chain · Technology",
-    template: "%s — Nischith R",
+    default: "Nischith R — Business Operations & Technology",
+    template: "%s · Nischith R",
   },
   description:
-    "Nischith R — Business Operations, Supply Chain, and Technology Management. B.Tech CS & Technology, Dayananda Sagar University (CGPA 8.13, 2027). Projects in secure credential systems, LLM observability, and data-driven operations.",
+    "Nischith R — business operations, supply chain, and technology management. Final-year B.Tech Computer Science student at Dayananda Sagar University, Bengaluru.",
   keywords: [
     "Nischith R",
     "Business Operations",
@@ -22,20 +22,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Nischith R — Business Operations · Supply Chain · Technology",
+    title: "Nischith R — Business Operations & Technology",
     description:
-      "I solve business problems with technology, automation, analytics, and AI.",
+      "Business operations and technology, with a computer science background.",
     siteName: "Nischith R",
   },
   robots: { index: true, follow: true },
-  metadataBase: new URL("https://nischith-r.example.com"),
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#000000",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -44,9 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
-        {/* Inter + JetBrains Mono — loaded at runtime, no build-time fetch */}
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -55,11 +53,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-black font-sans text-white antialiased selection:bg-white selection:text-black">
+      <body className="bg-white font-sans text-neutral-900 antialiased">
         {children}
       </body>
     </html>

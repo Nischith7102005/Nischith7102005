@@ -2,43 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens - restrained, professional, light theme */
+/* ── Monochrome Premium Tokens #000000 — ——————————————————— */
 @layer base {
   :root {
-    --bg: 0 0% 100%;
-    --fg: 240 10% 3.9%;
-    --muted: 240 5% 44%;
-    --muted-faint: 240 5% 96%;
-    --border: 240 6% 90%;
-    --border-strong: 240 6% 83%;
-    --card: 0 0% 99%;
-    --accent: 240 10% 3.9%;
-    --accent-fg: 0 0% 98%;
-    --radius: 10px;
-    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --bg: 0 0% 0%;              /* #000000 */
+    --bg-soft: 0 0% 4%;          /* #0A0A0A */
+    --bg-elevated: 0 0% 7%;      /* #111111 */
+    --card: 0 0% 8%;             /* #141414 */
+    --card-2: 0 0% 10%;          /* #1A1A1A */
+    --border: 0 0% 16%;          /* #2A2A2A */
+    --border-strong: 0 0% 22%;   /* #383838 */
+    --fg: 0 0% 100%;             /* #FFFFFF */
+    --muted: 0 0% 81%;           /* #CFCFCF */
+    --muted-2: 0 0% 54%;         /* #8A8A8A */
+    --radius: 8px;
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   * {
-    @apply border-border;
     border-color: hsl(var(--border));
   }
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
+    scroll-padding-top: 4.5rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scrollbar-gutter: stable;
   }
 
   body {
-    @apply bg-white text-foreground antialiased;
+    background: hsl(var(--bg));
+    color: hsl(var(--fg));
     font-family: var(--font-sans);
     font-size: 16px;
-    line-height: 1.6;
-    color: hsl(var(--fg));
-    background: hsl(var(--bg));
+    line-height: 1.65;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
@@ -47,78 +48,52 @@
   }
 
   :focus-visible {
-    outline: 2px solid hsl(var(--fg));
-    outline-offset: 2px;
+    outline: 1.5px solid hsl(var(--fg));
+    outline-offset: 3px;
     border-radius: 2px;
+  }
+
+  /* accessible scrollbar on dark */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A2A2A;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000;
   }
 }
 
-/* Subtle utilities */
 @layer components {
   .container-main {
-    @apply mx-auto w-full max-w-[1120px] px-6 sm:px-8;
+    @apply mx-auto w-full max-w-[1120px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .hairline {
+    @apply h-px w-full;
+    background: hsl(var(--border));
   }
 
   .text-balance {
     text-wrap: balance;
   }
-
-  .hairline {
-    height: 1px;
-    background: hsl(var(--border));
-  }
-
-  .link-underline {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-    text-decoration-color: hsl(var(--border-strong));
-    transition: text-decoration-color 200ms ease, color 200ms ease;
-  }
-  .link-underline:hover {
-    text-decoration-color: hsl(var(--fg));
-  }
-
-  /* Card base */
-  .card {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    border-radius: var(--radius);
-    transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
-  }
-  .card:hover {
-    border-color: hsl(var(--border-strong));
-  }
-
-  .card-interactive:hover {
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    transform: translateY(-1px);
-  }
-
-  /* Badge */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 999px;
-    border: 1px solid hsl(var(--border));
-    background: hsl(var(--muted-faint));
-    padding: 3px 10px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    color: hsl(var(--muted));
-    line-height: 1.4;
-  }
 }
 
-/* Reduced motion */
+/* ── Subtle motion: fade-up only ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
 }

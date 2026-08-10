@@ -13,16 +13,17 @@ const config: Config = {
         foreground: "hsl(var(--fg))",
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          faint: "hsl(var(--muted-faint))",
+          soft: "hsl(var(--muted-2))",
         },
         border: {
           DEFAULT: "hsl(var(--border))",
           strong: "hsl(var(--border-strong))",
         },
-        card: "hsl(var(--card))",
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-fg))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          hover: "hsl(var(--card-2))",
+          soft: "hsl(var(--bg-soft))",
+          elevated: "hsl(var(--bg-elevated))",
         },
       },
       fontFamily: {
@@ -31,18 +32,16 @@ const config: Config = {
       },
       borderRadius: {
         DEFAULT: "var(--radius)",
-        lg: "12px",
-        md: "10px",
-        sm: "8px",
+        lg: "10px",
+        md: "8px",
+        sm: "6px",
         full: "9999px",
       },
       maxWidth: {
         content: "1120px",
       },
-      spacing: {
-        // 8px system
-        "18": "4.5rem",
-        "22": "5.5rem",
+      letterSpacing: {
+        tightest: "-0.04em",
       },
     },
   },

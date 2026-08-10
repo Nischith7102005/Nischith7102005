@@ -9,47 +9,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
+        background: "hsl(var(--bg))",
+        foreground: "hsl(var(--fg))",
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          faint: "hsl(var(--muted-faint))",
         },
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          strong: "hsl(var(--border-strong))",
+        },
+        card: "hsl(var(--card))",
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        border: "hsl(var(--border))",
-        ring: "hsl(var(--ring))",
-        input: "hsl(var(--input))",
-        brand: {
-          DEFAULT: "hsl(var(--brand))",
-          soft: "hsl(var(--brand-soft))",
+          foreground: "hsl(var(--accent-fg))",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
-        display: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
-      boxShadow: {
-        soft: "0 20px 50px -20px rgba(0, 0, 0, 0.6)",
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+        lg: "12px",
+        md: "10px",
+        sm: "8px",
+        full: "9999px",
       },
-      backgroundImage: {
-        "grid-faint":
-          "linear-gradient(to right, hsl(var(--grid)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--grid)) 1px, transparent 1px)",
+      maxWidth: {
+        content: "1120px",
+      },
+      spacing: {
+        // 8px system
+        "18": "4.5rem",
+        "22": "5.5rem",
       },
     },
   },

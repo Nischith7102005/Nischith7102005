@@ -22,17 +22,13 @@ export function Experience() {
                     {job.role}
                   </h3>
                   <p className="mt-0.5 text-[15px] text-neutral-600">
-                    {job.company} · {job.location}
+                    {job.company}
                   </p>
                 </div>
                 <span className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-600">
                   {job.period}
                 </span>
               </div>
-
-              <p className="mt-4 text-[15px] leading-relaxed text-neutral-600">
-                {job.summary}
-              </p>
 
               <ul className="mt-5 grid gap-3 sm:grid-cols-2">
                 {job.highlights.map((h, i) => (

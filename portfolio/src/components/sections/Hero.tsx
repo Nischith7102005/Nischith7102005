@@ -13,31 +13,10 @@ export function Hero() {
           background.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600">
+        <p className="mt-6 max-w-4xl text-lg leading-relaxed text-neutral-600">
           I work where operations, data, and software meet — mapping how work
           actually flows, finding the friction, and building the processes and
-          tools that remove it. I&rsquo;m a final-year B.Tech Computer Science
-          student at Dayananda Sagar University.
-        </p>
-
-        <div className="mt-9 flex flex-wrap items-center gap-3">
-          <a
-            href="#work"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-neutral-900 px-6 text-[15px] font-medium text-white transition-colors hover:bg-neutral-700"
-          >
-            View selected work
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex h-11 items-center justify-center rounded-lg border border-neutral-300 bg-white px-6 text-[15px] font-medium text-neutral-900 transition-colors hover:bg-neutral-50"
-          >
-            Get in touch
-          </a>
-        </div>
-
-        <p className="mt-10 max-w-xl text-sm text-neutral-500">
-          {identity.availability}. Based in Bengaluru, comfortable working
-          remotely.
+          tools that remove it.
         </p>
       </div>
     </section>

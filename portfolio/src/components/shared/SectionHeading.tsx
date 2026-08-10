@@ -4,7 +4,6 @@ interface SectionHeadingProps {
   eyebrow: string;
   title: string;
   description?: string;
-  align?: "left" | "center";
   className?: string;
 }
 
@@ -12,35 +11,18 @@ export function SectionHeading({
   eyebrow,
   title,
   description,
-  align = "left",
   className,
 }: SectionHeadingProps) {
   return (
-    <div
-      className={cn(
-        "mb-12 max-w-[720px] md:mb-16",
-        align === "center" && "mx-auto text-center",
-        className
-      )}
-    >
-      <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+    <div className={cn("mb-10 max-w-[720px] md:mb-12", className)}>
+      <p className="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#8A8A8A]">
         {eyebrow}
       </p>
-      <h2
-        className={cn(
-          "mt-3 text-balance text-[28px] font-semibold leading-[1.1] tracking-[-0.02em] text-foreground sm:text-[36px] md:text-[42px]",
-          align === "center" && "mx-auto"
-        )}
-      >
+      <h2 className="mt-3 text-balance text-[30px] font-semibold leading-[1.05] tracking-[-0.03em] text-white sm:text-[36px] md:text-[40px]">
         {title}
       </h2>
       {description && (
-        <p
-          className={cn(
-            "mt-4 max-w-[60ch] text-[15px] leading-relaxed text-muted sm:text-[16px]",
-            align === "center" && "mx-auto"
-          )}
-        >
+        <p className="mt-4 max-w-[58ch] text-[15px] leading-[1.6] text-[#8A8A8A] sm:text-[15.5px]">
           {description}
         </p>
       )}

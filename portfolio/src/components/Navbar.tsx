@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { identity } from "@/lib/data";
 
 const LINKS = [
-  { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -16,18 +16,15 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (open) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -35,112 +32,127 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b backdrop-blur-[12px] transition-colors ${
+      className={`sticky top-0 z-50 border-b transition-colors ${
         scrolled
-          ? "border-border bg-white/90 supports-[backdrop-filter]:bg-white/80"
-          : "border-transparent bg-white/0"
+          ? "border-[#1A1A1A] bg-black/80 backdrop-blur-xl"
+          : "border-transparent bg-black"
       }`}
     >
       <div className="container-main flex h-[64px] items-center justify-between">
+        {/* Mark */}
         <a
           href="#top"
-          className="flex items-center gap-3 focus-visible:outline-offset-4"
-          aria-label="Home"
+          aria-label="Home — Nischith R"
+          className="flex items-center gap-3"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-[8px] bg-foreground text-[13px] font-semibold tracking-tight text-white">
+          <span className="grid h-8 w-8 place-items-center rounded-[6px] border border-[#2A2A2A] bg-[#111111] text-[11px] font-semibold tracking-[0.08em] text-white">
             {identity.initials}
           </span>
-          <span className="hidden text-[14px] font-medium tracking-tight sm:inline">
+          <span className="hidden text-[13.5px] font-medium tracking-[-0.02em] text-white sm:inline">
             {identity.name}
-            <span className="ml-2 font-mono text-[11px] font-normal tracking-wide text-muted">
-              {identity.location.split(",")[0]}
-            </span>
+          </span>
+          <span className="hidden text-[11px] tracking-wide text-[#8A8A8A] sm:inline">
+            · Bengaluru
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
-          {LINKS.map((item) => (
+        {/* Desktop nav */}
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-1 md:flex"
+        >
+          {LINKS.map((l) => (
             <a
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-3 py-1.5 text-[14px] text-muted transition-colors hover:bg-muted-faint hover:text-foreground"
+              key={l.href}
+              href={l.href}
+              className="rounded-full px-3 py-1.5 text-[13.5px] font-[450] tracking-[-0.01em] text-[#8A8A8A] transition-colors hover:text-white"
             >
-              {item.label}
+              {l.label}
             </a>
           ))}
         </nav>
 
+        {/* Actions */}
         <div className="flex items-center gap-2">
           <a
             href={`mailto:${identity.email}`}
-            className="hidden rounded-full border border-border bg-white px-4 py-2 text-[13px] font-medium transition-colors hover:border-border-strong hover:bg-muted-faint sm:inline-flex"
+            className="hidden h-8 items-center rounded-full bg-white px-4 text-[13px] font-medium tracking-[-0.01em] text-black transition-opacity hover:opacity-90 sm:inline-flex"
           >
-            Email me
+            Email
           </a>
           <a
             href={identity.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex rounded-full bg-foreground px-4 py-2 text-[13px] font-medium text-white transition-opacity hover:opacity-90"
+            className="inline-flex h-8 items-center rounded-full border border-[#2A2A2A] bg-[#0A0A0A] px-4 text-[13px] font-medium tracking-[-0.01em] text-white transition-colors hover:border-[#3A3A3A] hover:bg-[#141414]"
           >
             LinkedIn
           </a>
 
+          {/* Mobile toggle */}
           <button
             type="button"
-            className="ml-1 grid h-9 w-9 place-items-center rounded-full border border-border text-foreground transition-colors hover:bg-muted-faint md:hidden"
+            onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
-            onClick={() => setOpen((v) => !v)}
+            className="grid h-9 w-9 place-items-center rounded-full border border-[#2A2A2A] bg-[#0A0A0A] text-white transition-colors hover:bg-[#141414] md:hidden"
           >
-            <span className="relative block h-4 w-4">
+            <span className="relative block h-3.5 w-3.5" aria-hidden>
               <span
-                className={`absolute left-0 block h-[1.5px] w-4 bg-current transition-all ${open ? "top-[7px] rotate-45" : "top-0"}`}
+                className={`absolute left-0 block h-px w-3.5 bg-current transition-all duration-200 ${
+                  open ? "top-[6px] rotate-45" : "top-0"
+                }`}
               />
               <span
-                className={`absolute left-0 top-[7px] block h-[1.5px] w-4 bg-current transition-opacity ${open ? "opacity-0" : "opacity-100"}`}
+                className={`absolute left-0 top-[6px] block h-px w-3.5 bg-current transition-opacity duration-150 ${
+                  open ? "opacity-0" : "opacity-100"
+                }`}
               />
               <span
-                className={`absolute left-0 block h-[1.5px] w-4 bg-current transition-all ${open ? "top-[7px] -rotate-45" : "top-[14px]"}`}
+                className={`absolute left-0 block h-px w-3.5 bg-current transition-all duration-200 ${
+                  open ? "top-[6px] -rotate-45" : "top-[12px]"
+                }`}
               />
             </span>
           </button>
         </div>
       </div>
 
+      {/* Mobile sheet */}
       {open && (
-        <div className="border-t border-border bg-white md:hidden">
-          <nav className="container-main flex flex-col py-4" aria-label="Mobile">
-            {LINKS.map((item) => (
+        <div className="border-t border-[#1A1A1A] bg-black md:hidden">
+          <nav
+            aria-label="Mobile"
+            className="container-main flex flex-col py-6"
+          >
+            {LINKS.map((l) => (
               <a
-                key={item.href}
-                href={item.href}
+                key={l.href}
+                href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-[8px] px-3 py-3 text-[15px] font-medium text-foreground transition-colors hover:bg-muted-faint"
+                className="py-3 text-[15px] font-medium tracking-[-0.01em] text-[#CFCFCF] transition-colors hover:text-white"
               >
-                {item.label}
+                {l.label}
               </a>
             ))}
-            <div className="mt-4 flex gap-2 border-t border-border pt-4">
+            <div className="mt-6 flex gap-3 border-t border-[#1A1A1A] pt-6">
+              <a
+                href={`mailto:${identity.email}`}
+                className="flex-1 rounded-full bg-white py-3 text-center text-[14px] font-medium text-black"
+              >
+                Email me
+              </a>
               <a
                 href={identity.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex-1 rounded-full border border-border py-2.5 text-center text-[14px] font-medium"
+                className="flex-1 rounded-full border border-[#2A2A2A] bg-[#0A0A0A] py-3 text-center text-[14px] font-medium text-white"
               >
                 GitHub
               </a>
-              <a
-                href={identity.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="flex-1 rounded-full bg-foreground py-2.5 text-center text-[14px] font-medium text-white"
-              >
-                LinkedIn
-              </a>
             </div>
-            <p className="mt-4 font-mono text-[11px] text-muted">
-              {identity.email} · {identity.location}
+            <p className="mt-5 font-mono text-[11px] tracking-wide text-[#8A8A8A]">
+              {identity.email}
             </p>
           </nav>
         </div>

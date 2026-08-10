@@ -5,38 +5,37 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="border-t border-border bg-[#fcfcfb] py-16 sm:py-20 md:py-24"
+      className="border-t border-[#111111] bg-[#0A0A0A] py-16 sm:py-20 lg:py-24"
     >
       <div className="container-main">
         <SectionHeading
           eyebrow="Skills"
           title="Toolkit for operations & technology"
-          description="Grouped across disciplines I use to improve business processes, ship automation, and turn signals into decisions."
+          description="Organized for how hiring managers scan — business, engineering, data, cloud, and day-to-day tools. No percentages, no bars."
         />
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((cat) => (
             <div
               key={cat.id}
-              className="rounded-[12px] border border-border bg-white p-6"
+              className="border border-[#1A1A1A] bg-black p-6 transition-colors hover:border-[#2A2A2A]"
             >
               <div className="flex items-baseline justify-between gap-3">
-                <h3 className="text-[15px] font-semibold tracking-tight text-foreground">
+                <h3 className="text-[14px] font-semibold tracking-[-0.02em] text-white">
                   {cat.label}
                 </h3>
-                <span className="font-mono text-[11px] text-muted">
-                  {cat.skills.length} skills
+                <span className="font-mono text-[11px] tracking-wide text-[#5A5A5A]">
+                  {String(cat.skills.length).padStart(2, "0")}
                 </span>
               </div>
-              <p className="mt-1 text-[13px] leading-relaxed text-muted">
-                {cat.blurb}
-              </p>
+
+              <div className="mt-1 h-px w-full bg-[#111111]" aria-hidden />
 
               <ul className="mt-4 flex flex-wrap gap-1.5">
                 {cat.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="rounded-full border border-border bg-muted-faint px-3 py-1 text-[12px] text-muted transition-colors hover:border-border-strong hover:text-foreground"
+                    className="border border-[#1A1A1A] bg-[#0A0A0A] px-2.5 py-1 text-[12.5px] leading-none tracking-[-0.01em] text-[#CFCFCF]"
                   >
                     {skill}
                   </li>
@@ -45,6 +44,11 @@ export function Skills() {
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mt-8 max-w-[60ch] text-center font-mono text-[11px] leading-relaxed tracking-wide text-[#5A5A5A]">
+          Prefer composition over sprawl — pick the right lever for the problem,
+          not every tool at once.
+        </p>
       </div>
     </section>
   );

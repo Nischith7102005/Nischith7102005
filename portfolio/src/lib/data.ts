@@ -7,7 +7,7 @@ export const identity = {
   initials: "NR",
   headline: "Business Operations · Supply Chain · Technology Management",
   tagline:
-    "I solve business problems with technology, automation, analytics, and AI.",
+    "I solve business problems with technology, automation, analytics, and AI — bridging operations, supply chain, and engineering to make systems flow.",
   location: "Bengaluru, Karnataka, India",
   email: "nischith.7102005@gmail.com",
   linkedin: "https://linkedin.com/in/nischith-r-857669296",
@@ -19,104 +19,51 @@ export const identity = {
 };
 
 /* -------------------------------------------------------------------------- */
-/*  About                                                                     */
-/* -------------------------------------------------------------------------- */
-
-export const about = {
-  paragraphs: [
-    "I intentionally chose to study Computer Science and Technology because it sits at the intersection of deep technical knowledge and business, management, entrepreneurship, and operations. My ambition was never traditional software development — it is using technology to solve business problems.",
-    "I care about the systems behind organisations: how processes flow, how information moves between teams, and where automation, analytics, and AI can remove friction and drive measurable efficiency. I enjoy bridging technical and business teams, translating requirements into clear plans, and building the workflows that let companies operate with clarity and speed.",
-    "Today I bring together business analysis, operations, supply chain thinking, project coordination, and operations analytics to improve how work gets done — and I am always learning how new technology can make business outcomes better.",
-  ],
-  stats: [
-    { label: "CGPA", value: "8.13", suffix: "/10" },
-    { label: "Graduation Year", value: "2027", suffix: "" },
-    { label: "Projects Delivered", value: "12", suffix: "+" },
-    { label: "Certifications", value: "6", suffix: "+" },
-  ],
-};
-
-/* -------------------------------------------------------------------------- */
-/*  Career Interests                                                          */
-/* -------------------------------------------------------------------------- */
-
-export interface CareerInterest {
-  title: string;
-  description: string;
-}
-
-export const careerInterests: CareerInterest[] = [
-  {
-    title: "Business & Operations Analysis",
-    description:
-      "Translating business needs into clear requirements, process maps, and actionable solutions.",
-  },
-  {
-    title: "Supply Chain & Logistics",
-    description:
-      "Coordinating procurement, inventory control, and distribution networks to keep value chains flowing.",
-  },
-  {
-    title: "Project Management & PMO",
-    description:
-      "Planning delivery milestones, coordinating cross-functional teams, and standardising governance.",
-  },
-  {
-    title: "Product & Technology Operations",
-    description:
-      "Operationalising technology and AI deployments with workflows, data, and cross-team alignment.",
-  },
-  {
-    title: "Strategy & Process Improvement",
-    description:
-      "Mapping, measuring, and redesigning workflows to remove waste and improve organizational throughput.",
-  },
-  {
-    title: "Operations Analytics",
-    description:
-      "Turning raw operational signals into dashboards, KPIs, and evidence-based decision support.",
-  },
-];
-
-/* -------------------------------------------------------------------------- */
-/*  Skills                                                                    */
+/*  Skills — requested grouping: Programming / Data / Business / Cloud / Tools */
 /* -------------------------------------------------------------------------- */
 
 export interface SkillCategory {
   id: string;
   label: string;
-  blurb: string;
   skills: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     id: "business",
-    label: "Business & Operations",
-    blurb:
-      "The core operating disciplines that keep teams aligned and delivering.",
+    label: "Business",
     skills: [
       "Requirements Engineering",
-      "Process Mapping & BPMN",
+      "Process Mapping (BPMN)",
       "Workflow Optimization",
       "Gap & Root Cause Analysis",
-      "KPI & Metrics Benchmarking",
+      "KPI & Metrics Design",
       "Sprint & Milestone Planning",
       "Stakeholder Alignment",
       "Risk & Resource Management",
     ],
   },
   {
-    id: "data",
-    label: "Data & Analytics",
-    blurb: "Turning raw information into reporting, insight, and decisions.",
+    id: "programming",
+    label: "Programming",
     skills: [
-      "SQL",
       "Python",
-      "Excel & VBA",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "HTML / CSS",
+      "REST APIs",
+    ],
+  },
+  {
+    id: "data",
+    label: "Data",
+    skills: [
       "Pandas & NumPy",
-      "dbt Core",
+      "Excel & VBA",
       "MongoDB",
+      "PostgreSQL",
+      "dbt Core",
       "ETL Pipelines",
       "Data Visualization",
       "Statistical Reporting",
@@ -124,46 +71,28 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "cloud",
-    label: "Cloud & Deployment",
-    blurb: "Shipping, hosting, and operating technology reliably and securely.",
+    label: "Cloud",
     skills: [
       "AWS Services",
       "Docker",
       "CI/CD Pipelines",
       "GitHub Actions",
       "Jenkins",
-      "Vercel & Render",
-      "Railway",
-      "Environment Management",
+      "Vercel / Render / Railway",
     ],
   },
   {
-    id: "ai",
-    label: "AI & Automation",
-    blurb:
-      "Using AI and workflow automation to remove friction and scale effort.",
+    id: "tools",
+    label: "Tools",
     skills: [
-      "n8n Workflow Automation",
-      "AI Process Integration",
-      "Prompt Engineering",
-      "AI Monitoring Dashboards",
-      "REST APIs & Webhooks",
-      "Cognitive Waste Indexing",
+      "n8n Automation",
+      "Git & GitHub",
+      "Jira & Notion",
+      "Figma",
+      "Postman",
       "LLM Observability",
-      "RAG & Embeddings",
-    ],
-  },
-  {
-    id: "research",
-    label: "Research & Strategy",
-    blurb: "Synthesising information to inform strategy and decisions.",
-    skills: [
-      "Technical Documentation",
-      "Market & Industry Research",
-      "Information Synthesis",
-      "Executive Reporting",
+      "Prompt Engineering",
       "Web Scraping",
-      "Competitive Analysis",
     ],
   },
 ];
@@ -177,22 +106,22 @@ export const experience = [
     role: "Technology Intern",
     company: "Humans Care Foundation",
     location: "Remote",
-    period: "Internship",
+    period: "2024",
+    type: "Internship",
     summary:
-      "Interned with a social-impact organisation, applying technology and process skills to keep projects coordinated, documented, and on track across distributed teams.",
+      "Applied technology and process design to keep programs coordinated, documented, and on track across distributed teams in a social-impact organisation.",
     highlights: [
-      "Cross-functional coordination across technology, program, and operations teams",
-      "Documentation of workflows, processes, and technical handoffs",
-      "Workflow optimization to reduce manual effort and repetition",
-      "Task management, prioritisation, and milestone tracking for ongoing initiatives",
-      "Stakeholder reporting and status communication to keep leadership informed",
+      "Coordinated delivery across technology, program, and operations stakeholders",
+      "Documented workflows, handoffs, and decision logs to reduce rework",
+      "Optimized repetitive workflows, cutting manual effort in weekly operations",
+      "Owned task prioritization and milestone tracking for active initiatives",
+      "Delivered concise stakeholder reporting for leadership review",
     ],
   },
 ];
 
 /* -------------------------------------------------------------------------- */
-/*  Projects - Filtered: removed abysslink, seance search, keyhound 2.0,      */
-/*  excel file validator                                                      */
+/*  Projects                                                                  */
 /* -------------------------------------------------------------------------- */
 
 export interface Project {
@@ -212,160 +141,122 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "CertiSure",
-    tagline: "Secure digital certificate verification",
+    tagline: "Tamper-proof credential verification",
     description:
-      "Secure, scalable credential verification platform eliminating academic forgery and manual verification inefficiencies. Tamper-proof issuance with instant cryptographic validation.",
+      "Scalable platform for issuing and instantly validating academic and corporate credentials with cryptographic assurance.",
     focus: [
-      "Led end-to-end delivery planning, sprint cycles, and milestone tracking",
-      "Designed QR + hash-based authenticity checks with metadata verification",
-      "Built AI verification engine: OCR via Tesseract.js, layout tampering analysis, trust score 0-100",
-      "Coordinated cross-functional execution between technical and business teams",
+      "Led sprint planning, milestone tracking, and cross-functional execution",
+      "Designed QR + hash verification with metadata and audit trails",
+      "Built AI verification engine using Tesseract.js OCR and layout analysis with 0–100 trust scoring",
     ],
-    outcome:
-      "Shipped a structured, well-documented product reducing verification time from days to seconds with immutable audit trails.",
-    tags: ["Project Leadership", "Cryptography", "OCR", "QR Auth", "Next.js"],
+    outcome: "Reduced verification from days to seconds with immutable audit history.",
+    tags: ["Next.js", "Cryptography", "OCR", "QR Auth", "Project Leadership"],
     github: "https://github.com/Nischith7102005/certisure",
     year: "2024",
     featured: true,
-    category: "Security / Product",
+    category: "Security · Product",
+  },
+  {
+    title: "Monitr-AI",
+    tagline: "LLM observability and cognitive waste",
+    description:
+      "Static-first observability for LLM inference — dashboards, adversarial probes, and automated ETL to surface inefficiency.",
+    focus: [
+      "Authored Cognitive Waste Index (semantic drift × efficiency × quality)",
+      "Built dashboards for token use, latency, cost, and success rate",
+      "Shipped Convex → Webhook → Postgres → dbt ETL with GitHub Actions cron",
+    ],
+    outcome: "Gave teams a single KPI surface to detect and act on inference waste.",
+    tags: ["Observability", "Postgres", "dbt", "Convex", "ETL"],
+    github: "https://github.com/Nischith7102005/aicwd",
+    year: "2024",
+    featured: true,
+    category: "AI · Data Ops",
+  },
+  {
+    title: "PsyMap — Mind Brain Map",
+    tagline: "Content intelligence, visualized",
+    description:
+      "Local-first app that turns URLs and PDFs into interactive brain maps of interests, themes, and psychological traits.",
+    focus: [
+      "Force-directed graph in D3.js — draggable, zoomable, exportable",
+      "Theme engine across 6 domains plus 6-dimension psychological profile",
+      "100% on-device processing — no uploads, no storage",
+    ],
+    outcome: "Made complex information scannable for planning and research teams.",
+    tags: ["D3.js", "NLP", "Visualization", "Privacy-First"],
+    github: "https://github.com/Nischith7102005/psymap",
+    year: "2024",
+    featured: true,
+    category: "Visualization · Strategy",
   },
   {
     title: "GreenMind",
     tagline: "Smart greenhouse management",
     description:
-      "Full-stack smart agriculture platform with IoT sensor simulation and AI-driven grow recommendations. Firebase Auth enabled.",
+      "Full-stack platform simulating IoT sensor data and delivering AI grow recommendations with authenticated access.",
     focus: [
-      "Built responsive dashboard with greenhouse metrics and plant health tracking",
-      "Implemented Firebase Auth (email/password) with persistent sessions",
-      "Designed How-It-Works: Connect → Monitor → Optimize flow",
-      "Production build: single-file optimized dist with inlined assets",
+      "Dashboard for greenhouse metrics and plant health",
+      "Firebase Auth with persistent sessions and protected routes",
+      "Optimized single-file production build with inlined assets",
     ],
-    outcome:
-      "Delivered a visually rich, authenticated product experience showing Smart Sensing, AI Insights, Predictive Guard, and AI Companion modules.",
-    tags: ["TypeScript", "React", "Firebase", "IoT"],
+    outcome: "Shipped a polished, auth-gated product with clear Connect → Monitor → Optimize flow.",
+    tags: ["React", "TypeScript", "Firebase", "IoT"],
     github: "https://github.com/Nischith7102005/Greenmind",
     year: "2024",
-    featured: true,
-    category: "IoT / AI",
-  },
-  {
-    title: "Monitr-AI",
-    tagline: "LLM observability & cognitive waste",
-    description:
-      "Static-first LLM observability platform with real-time dashboards, adversarial testing, and automated ETL pipelines. Proprietary Cognitive Waste Index framework.",
-    focus: [
-      "Designed Cognitive Waste Index combining semantic drift, efficiency, and quality",
-      "Built interactive monitoring dashboards for token efficiency, latency, costs, success rates",
-      "Engineered Convex → Webhook → Postgres → dbt Core ETL with GitHub Actions cron",
-      "Probed models with uncensored local LLMs for bias and censorship detection",
-    ],
-    outcome:
-      "Turned raw LLM signals into visible KPIs that help teams spot inefficiency and act on it across inference lifecycles.",
-    tags: ["LLMs", "Observability", "dbt", "Convex", "Postgres", "ETL"],
-    github: "https://github.com/Nischith7102005/aicwd",
-    year: "2024",
-    featured: true,
-    category: "AI / Data Ops",
-  },
-  {
-    title: "PsyMap — Mind Brain Map",
-    tagline: "Content intelligence & psychological patterns",
-    description:
-      "Local-first app converting web URLs and PDFs into interactive brain map visualizations. D3.js force-directed graph showing interests, themes, and personality traits.",
-    focus: [
-      "Engineered strategic planning models for complex information architectures",
-      "Implemented word frequency, 6-theme detection (Tech, Science, Business, Health, Arts, Society)",
-      "Built psychological profiling: Analytical, Creative, Practical, Social, Ambitious, Curious",
-      "100% local processing, no data storage, draggable nodes, zoom & pan export",
-    ],
-    outcome:
-      "Provided a clear, visual decision-support layer for planning teams navigating complex information.",
-    tags: ["D3.js", "NLP", "Privacy-First", "Visualization", "Strategy"],
-    github: "https://github.com/Nischith7102005/psymap",
-    year: "2024",
-    featured: true,
-    category: "Data Viz / Strategy",
+    featured: false,
+    category: "IoT · AI",
   },
   {
     title: "LaTeX Plagiarism Suite",
     tagline: "Checker & remover — browser only",
     description:
-      "Browser-only workflow for checking and safely rewriting LaTeX while preserving commands, math, citations, labels. Strict risk scoring for academic phrasing.",
+      "Browser workflow to audit and rewrite LaTeX prose while perfectly preserving commands, math, and citations.",
     focus: [
-      "Validated LaTeX, protected spans for commands, math, verbatim, lstlisting, citations",
-      "Extracted natural-language sentences and scored plagiarism risk per sentence",
-      "Rewrites only unprotected prose while preserving \\cite, \\ref, math intact",
-      "Deployed to GitHub Pages via Actions on every push to master",
+      "Protected spans for commands, math, verbatim, lstlisting, citations",
+      "Sentence-level risk scoring for AI-generated and repetitive phrasing",
+      "Deployed to GitHub Pages via Actions on push to master",
     ],
-    outcome:
-      "Enabled academics to audit and remediate LaTeX without breaking compilation or losing protected semantics.",
-    tags: ["JavaScript", "LaTeX", "NLP", "GitHub Pages"],
+    outcome: "Let academics remediate documents without breaking compilation.",
+    tags: ["JavaScript", "LaTeX", "NLP"],
     github: "https://github.com/Nischith7102005/latexplagiarism",
     year: "2024",
     featured: false,
-    category: "Tooling / NLP",
+    category: "Tooling · NLP",
   },
   {
     title: "Living Dataset",
     tagline: "Evolutionary synthetic data engine",
     description:
-      "Single notebook that breeds new synthetic images/text by mutation, crossover and fitness-based selection. Generates high-value training data adapting to downstream weak spots.",
+      "Single-notebook engine that breeds synthetic rows by mutation, crossover, and classifier feedback to strengthen downstream models.",
     focus: [
-      "Implemented Gaussian noise + crossover + classifier feedback loop",
-      "Swap any CSV: evolution cell stays identical, mutation scale 0.05, gens 5, pop_size = row count",
-      "Outputs evolved.csv, before_after.png scatter, accuracy.txt before vs after",
-      "Benchmark: Iris 120→120 synthetic +4% hold-out accuracy, +8% rare-class recall",
+      "Gaussian noise + crossover + fitness selection loop",
+      "Drop-in for any CSV — pop_size = row count, 5 generations",
+      "Benchmark: Iris +4% hold-out accuracy, +8% rare-class recall",
     ],
-    outcome:
-      "Grew fresh training rows locally with no uploads, reproducible via np.random.seed(42), reducing re-identification risk.",
-    tags: ["Jupyter", "Synthetic Data", "Evolutionary", "Python"],
+    outcome: "Generated useful training rows locally — reproducible with seed 42.",
+    tags: ["Python", "Jupyter", "Synthetic Data"],
     github: "https://github.com/Nischith7102005/living-dataset",
     year: "2023",
     featured: false,
-    category: "AI / Data",
+    category: "AI · Data",
   },
 ];
 
 /* -------------------------------------------------------------------------- */
-/*  Certifications                                                            */
+/*  Certifications — merged into Education in UI, kept as data               */
 /* -------------------------------------------------------------------------- */
 
 export const certifications = [
-  {
-    title: "AWS Cloud Foundations",
-    issuer: "AWS Academy",
-    description:
-      "Foundations of cloud concepts, core AWS services, security, and architecture.",
-  },
-  {
-    title: "IBM Data & Database Fundamentals",
-    issuer: "IBM",
-    description:
-      "Core data and database concepts, SQL, and data management fundamentals.",
-  },
+  { title: "AWS Cloud Foundations", issuer: "AWS Academy" },
+  { title: "IBM Data & Database Fundamentals", issuer: "IBM" },
   {
     title: "Verizon Cloud Platform Job Simulation",
     issuer: "Forage",
-    description:
-      "Realistic cloud platform tasks simulating an operations-oriented work environment.",
   },
-  {
-    title: "Data Analytics (SQL, Excel & Python)",
-    issuer: "Certification",
-    description:
-      "Practical analytics workflow combining SQL, Excel, and Python for insight.",
-  },
-  {
-    title: "Data Analytics & AI",
-    issuer: "Proov",
-    description:
-      "Applying analytics and AI techniques to real business and data problems.",
-  },
-  {
-    title: "MongoDB",
-    issuer: "MongoDB University",
-    description: "Document database design, modeling, and querying with MongoDB.",
-  },
+  { title: "Data Analytics (SQL, Excel & Python)", issuer: "Certified" },
+  { title: "Data Analytics & AI", issuer: "Proov" },
+  { title: "MongoDB", issuer: "MongoDB University" },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -379,31 +270,8 @@ export const education = {
   period: "2023 – 2027",
   cgpa: "8.13 / 10",
   details: [
-    "Core Coursework: Database Management Systems, Data Structures, Cloud Computing, Operations & Systems Analysis",
-    "Specialized focus on process optimization, supply chain analytics, and technical project management",
-    "Engaged in hands-on technical simulations, hackathons, and industry certification tracks",
-  ],
-};
-
-/* -------------------------------------------------------------------------- */
-/*  Navigation & Contact                                                      */
-/* -------------------------------------------------------------------------- */
-
-export const nav = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Interests", href: "#interests" },
-  { label: "Contact", href: "#contact" },
-];
-
-export const footerLinks = {
-  social: [
-    { label: "GitHub", href: "https://github.com/Nischith7102005" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/nischith-r-857669296" },
-    { label: "Email", href: "mailto:nischith.7102005@gmail.com" },
+    "Database Management Systems, Data Structures, Cloud Computing, Operations & Systems Analysis",
+    "Focus on process optimization, supply chain analytics, and technical project management",
+    "Simulations, hackathons, and industry certification tracks completed alongside coursework",
   ],
 };

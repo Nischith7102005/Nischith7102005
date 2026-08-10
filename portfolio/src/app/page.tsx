@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="bg-black">
+      <main>
         <Hero />
         <Projects />
         <Experience />

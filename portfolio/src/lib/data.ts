@@ -1,26 +1,11 @@
-/* -------------------------------------------------------------------------- */
-/*  Identity                                                                  */
-/* -------------------------------------------------------------------------- */
-
 export const identity = {
   name: "Nischith R",
-  initials: "NR",
-  headline: "Business Operations · Supply Chain · Technology Management",
-  tagline:
-    "I solve business problems with technology, automation, analytics, and AI — bridging operations, supply chain, and engineering to make systems flow.",
-  location: "Bengaluru, Karnataka, India",
+  location: "Bengaluru, India",
   email: "nischith.7102005@gmail.com",
   linkedin: "https://linkedin.com/in/nischith-r-857669296",
   github: "https://github.com/Nischith7102005",
-  degree: "B.Tech in Computer Science and Technology",
-  university: "Dayananda Sagar University",
-  graduationYear: "2027",
-  cgpa: "8.13",
+  availability: "Open to internships and full-time roles for 2026",
 };
-
-/* -------------------------------------------------------------------------- */
-/*  Skills — requested grouping: Programming / Data / Business / Cloud / Tools */
-/* -------------------------------------------------------------------------- */
 
 export interface SkillCategory {
   id: string;
@@ -33,14 +18,13 @@ export const skillCategories: SkillCategory[] = [
     id: "business",
     label: "Business",
     skills: [
-      "Requirements Engineering",
-      "Process Mapping (BPMN)",
-      "Workflow Optimization",
-      "Gap & Root Cause Analysis",
-      "KPI & Metrics Design",
-      "Sprint & Milestone Planning",
-      "Stakeholder Alignment",
-      "Risk & Resource Management",
+      "Requirements engineering",
+      "Process mapping",
+      "Workflow optimization",
+      "Gap and root-cause analysis",
+      "KPI design",
+      "Stakeholder alignment",
+      "Risk and resource management",
     ],
   },
   {
@@ -64,18 +48,18 @@ export const skillCategories: SkillCategory[] = [
       "MongoDB",
       "PostgreSQL",
       "dbt Core",
-      "ETL Pipelines",
-      "Data Visualization",
-      "Statistical Reporting",
+      "ETL pipelines",
+      "Data visualization",
+      "Statistical reporting",
     ],
   },
   {
     id: "cloud",
-    label: "Cloud",
+    label: "Cloud & DevOps",
     skills: [
-      "AWS Services",
+      "AWS",
       "Docker",
-      "CI/CD Pipelines",
+      "CI/CD pipelines",
       "GitHub Actions",
       "Jenkins",
       "Vercel / Render / Railway",
@@ -85,21 +69,16 @@ export const skillCategories: SkillCategory[] = [
     id: "tools",
     label: "Tools",
     skills: [
-      "n8n Automation",
+      "n8n automation",
       "Git & GitHub",
       "Jira & Notion",
       "Figma",
       "Postman",
-      "LLM Observability",
-      "Prompt Engineering",
-      "Web Scraping",
+      "Prompt engineering",
+      "Web scraping",
     ],
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*  Experience                                                                */
-/* -------------------------------------------------------------------------- */
 
 export const experience = [
   {
@@ -107,161 +86,106 @@ export const experience = [
     company: "Humans Care Foundation",
     location: "Remote",
     period: "2024",
-    type: "Internship",
     summary:
-      "Applied technology and process design to keep programs coordinated, documented, and on track across distributed teams in a social-impact organisation.",
+      "Supported a social-impact organisation by keeping programs coordinated, documented, and on schedule across distributed teams.",
     highlights: [
-      "Coordinated delivery across technology, program, and operations stakeholders",
-      "Documented workflows, handoffs, and decision logs to reduce rework",
-      "Optimized repetitive workflows, cutting manual effort in weekly operations",
-      "Owned task prioritization and milestone tracking for active initiatives",
-      "Delivered concise stakeholder reporting for leadership review",
+      "Coordinated work across technology, program, and operations teams",
+      "Documented workflows, handoffs, and decision logs that reduced rework",
+      "Automated repetitive processes, cutting manual effort in weekly operations",
+      "Tracked milestones for active initiatives and prepared updates for leadership",
     ],
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*  Projects                                                                  */
-/* -------------------------------------------------------------------------- */
 
 export interface Project {
   title: string;
   tagline: string;
   description: string;
-  focus: string[];
   outcome: string;
   tags: string[];
   github?: string;
-  demo?: string;
   year?: string;
   featured?: boolean;
-  category?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
   {
     title: "CertiSure",
-    tagline: "Tamper-proof credential verification",
+    tagline: "Credential verification platform",
     description:
-      "Scalable platform for issuing and instantly validating academic and corporate credentials with cryptographic assurance.",
-    focus: [
-      "Led sprint planning, milestone tracking, and cross-functional execution",
-      "Designed QR + hash verification with metadata and audit trails",
-      "Built AI verification engine using Tesseract.js OCR and layout analysis with 0–100 trust scoring",
-    ],
-    outcome: "Reduced verification from days to seconds with immutable audit history.",
-    tags: ["Next.js", "Cryptography", "OCR", "QR Auth", "Project Leadership"],
+      "A platform for issuing and instantly verifying academic and corporate credentials, with QR-based validation and a tamper-evident audit trail.",
+    outcome: "Verification went from days to seconds, with an immutable record of every check.",
+    tags: ["Next.js", "Cryptography", "OCR", "QR validation"],
     github: "https://github.com/Nischith7102005/certisure",
     year: "2024",
     featured: true,
-    category: "Security · Product",
+    image: "/images/certisure.jpg",
   },
   {
     title: "Monitr-AI",
-    tagline: "LLM observability and cognitive waste",
+    tagline: "LLM observability and cost tracking",
     description:
-      "Static-first observability for LLM inference — dashboards, adversarial probes, and automated ETL to surface inefficiency.",
-    focus: [
-      "Authored Cognitive Waste Index (semantic drift × efficiency × quality)",
-      "Built dashboards for token use, latency, cost, and success rate",
-      "Shipped Convex → Webhook → Postgres → dbt ETL with GitHub Actions cron",
-    ],
-    outcome: "Gave teams a single KPI surface to detect and act on inference waste.",
-    tags: ["Observability", "Postgres", "dbt", "Convex", "ETL"],
+      "Dashboards and automated pipelines that surface how much LLM inference actually costs — in tokens, latency, and wasted output.",
+    outcome: "Teams got a single view of inference efficiency and a clear list of where to act.",
+    tags: ["Observability", "PostgreSQL", "dbt", "ETL"],
     github: "https://github.com/Nischith7102005/aicwd",
     year: "2024",
     featured: true,
-    category: "AI · Data Ops",
+    image: "/images/monitr-ai.jpg",
   },
   {
-    title: "PsyMap — Mind Brain Map",
+    title: "PsyMap",
     tagline: "Content intelligence, visualized",
     description:
-      "Local-first app that turns URLs and PDFs into interactive brain maps of interests, themes, and psychological traits.",
-    focus: [
-      "Force-directed graph in D3.js — draggable, zoomable, exportable",
-      "Theme engine across 6 domains plus 6-dimension psychological profile",
-      "100% on-device processing — no uploads, no storage",
-    ],
-    outcome: "Made complex information scannable for planning and research teams.",
-    tags: ["D3.js", "NLP", "Visualization", "Privacy-First"],
+      "A local-first app that turns URLs and PDFs into interactive maps of interests, themes, and psychological traits, using force-directed graphs.",
+    outcome: "Made large amounts of text scannable for planning and research teams.",
+    tags: ["D3.js", "NLP", "Visualization"],
     github: "https://github.com/Nischith7102005/psymap",
     year: "2024",
     featured: true,
-    category: "Visualization · Strategy",
+    image: "/images/psymap.jpg",
   },
   {
     title: "GreenMind",
     tagline: "Smart greenhouse management",
     description:
-      "Full-stack platform simulating IoT sensor data and delivering AI grow recommendations with authenticated access.",
-    focus: [
-      "Dashboard for greenhouse metrics and plant health",
-      "Firebase Auth with persistent sessions and protected routes",
-      "Optimized single-file production build with inlined assets",
-    ],
-    outcome: "Shipped a polished, auth-gated product with clear Connect → Monitor → Optimize flow.",
+      "Full-stack platform that simulates IoT sensor data and gives AI-based grow recommendations, with authenticated access and persistent sessions.",
+    outcome: "A working, auth-gated product with a clear monitor-to-optimize flow.",
     tags: ["React", "TypeScript", "Firebase", "IoT"],
     github: "https://github.com/Nischith7102005/Greenmind",
     year: "2024",
-    featured: false,
-    category: "IoT · AI",
   },
   {
     title: "LaTeX Plagiarism Suite",
-    tagline: "Checker & remover — browser only",
+    tagline: "Audit and rewrite LaTeX in the browser",
     description:
-      "Browser workflow to audit and rewrite LaTeX prose while perfectly preserving commands, math, and citations.",
-    focus: [
-      "Protected spans for commands, math, verbatim, lstlisting, citations",
-      "Sentence-level risk scoring for AI-generated and repetitive phrasing",
-      "Deployed to GitHub Pages via Actions on push to master",
-    ],
-    outcome: "Let academics remediate documents without breaking compilation.",
+      "A browser-only workflow to check and rewrite LaTeX prose while preserving commands, math, and citations, with sentence-level risk scoring.",
+    outcome: "Academics could clean up documents without breaking compilation.",
     tags: ["JavaScript", "LaTeX", "NLP"],
     github: "https://github.com/Nischith7102005/latexplagiarism",
     year: "2024",
-    featured: false,
-    category: "Tooling · NLP",
   },
   {
     title: "Living Dataset",
-    tagline: "Evolutionary synthetic data engine",
+    tagline: "Synthetic data generation",
     description:
-      "Single-notebook engine that breeds synthetic rows by mutation, crossover, and classifier feedback to strengthen downstream models.",
-    focus: [
-      "Gaussian noise + crossover + fitness selection loop",
-      "Drop-in for any CSV — pop_size = row count, 5 generations",
-      "Benchmark: Iris +4% hold-out accuracy, +8% rare-class recall",
-    ],
-    outcome: "Generated useful training rows locally — reproducible with seed 42.",
-    tags: ["Python", "Jupyter", "Synthetic Data"],
+      "A notebook-based engine that expands small datasets through mutation, crossover, and classifier feedback to improve downstream model accuracy.",
+    outcome: "Consistently better hold-out accuracy and rare-class recall on benchmark data.",
+    tags: ["Python", "Jupyter", "Synthetic data"],
     github: "https://github.com/Nischith7102005/living-dataset",
     year: "2023",
-    featured: false,
-    category: "AI · Data",
   },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*  Certifications — merged into Education in UI, kept as data               */
-/* -------------------------------------------------------------------------- */
 
 export const certifications = [
   { title: "AWS Cloud Foundations", issuer: "AWS Academy" },
-  { title: "IBM Data & Database Fundamentals", issuer: "IBM" },
-  {
-    title: "Verizon Cloud Platform Job Simulation",
-    issuer: "Forage",
-  },
-  { title: "Data Analytics (SQL, Excel & Python)", issuer: "Certified" },
+  { title: "Data & Database Fundamentals", issuer: "IBM" },
+  { title: "Cloud Platform Job Simulation", issuer: "Verizon (Forage)" },
   { title: "Data Analytics & AI", issuer: "Proov" },
+  { title: "Data Analytics (SQL, Excel, Python)", issuer: "Certified" },
   { title: "MongoDB", issuer: "MongoDB University" },
 ];
-
-/* -------------------------------------------------------------------------- */
-/*  Education                                                                 */
-/* -------------------------------------------------------------------------- */
 
 export const education = {
   degree: "B.Tech in Computer Science and Technology",
@@ -269,9 +193,6 @@ export const education = {
   location: "Bengaluru, Karnataka, India",
   period: "2023 – 2027",
   cgpa: "8.13 / 10",
-  details: [
+  coursework:
     "Database Management Systems, Data Structures, Cloud Computing, Operations & Systems Analysis",
-    "Focus on process optimization, supply chain analytics, and technical project management",
-    "Simulations, hackathons, and industry certification tracks completed alongside coursework",
-  ],
 };

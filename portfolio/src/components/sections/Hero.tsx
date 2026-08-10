@@ -2,60 +2,43 @@ import { identity } from "@/lib/data";
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="bg-black"
-      aria-label="Hero"
-    >
-      <div className="container-main">
-        {/* Eyebrow */}
-        <div className="pt-10 sm:pt-14">
-          <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#8A8A8A]">
-            Bengaluru, India · Available for 2026 internships & full-time
-          </p>
+    <section id="top" className="bg-white" aria-label="Introduction">
+      <div className="container-main pb-20 pt-14 sm:pb-28 sm:pt-20">
+        <p className="text-sm font-medium text-neutral-500">
+          Hi, I&rsquo;m {identity.name} · {identity.location}
+        </p>
+
+        <h1 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-neutral-900 sm:text-5xl">
+          Business operations and technology, backed by an engineering
+          background.
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600">
+          I work where operations, data, and software meet — mapping how work
+          actually flows, finding the friction, and building the processes and
+          tools that remove it. I&rsquo;m a final-year B.Tech Computer Science
+          student at Dayananda Sagar University.
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center gap-3">
+          <a
+            href="#work"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-neutral-900 px-6 text-[15px] font-medium text-white transition-colors hover:bg-neutral-700"
+          >
+            View selected work
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex h-11 items-center justify-center rounded-lg border border-neutral-300 bg-white px-6 text-[15px] font-medium text-neutral-900 transition-colors hover:bg-neutral-50"
+          >
+            Get in touch
+          </a>
         </div>
 
-        <div className="pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
-          <h1 className="max-w-[12ch] text-balance text-[48px] font-[700] leading-[0.9] tracking-[-0.045em] text-white sm:text-[62px] lg:text-[74px]">
-            {identity.name}
-          </h1>
-
-          <p className="mt-6 max-w-[42ch] font-mono text-[11px] uppercase tracking-[0.14em] leading-relaxed text-[#8A8A8A] sm:text-[11.5px]">
-            {identity.headline}
-          </p>
-
-          <p className="mt-8 max-w-[34ch] text-[20px] font-[450] leading-[1.45] tracking-[-0.02em] text-[#EDEDED] sm:max-w-[28ch] sm:text-[22px]">
-            I solve business problems with{" "}
-            <span className="font-semibold text-white">
-              technology, automation, analytics, and AI
-            </span>
-            .
-          </p>
-
-          <p className="mt-4 max-w-[48ch] text-[15.5px] leading-[1.65] text-[#8A8A8A]">
-            Focused on how work actually flows — mapping processes, removing
-            friction, and shipping useful systems that teams adopt.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="inline-flex h-[44px] items-center justify-center rounded-full bg-white px-7 text-[14px] font-semibold tracking-[-0.01em] text-black transition-opacity hover:opacity-90 focus-visible:outline-offset-4"
-            >
-              View projects
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex h-[44px] items-center justify-center rounded-full border border-[#2A2A2A] bg-transparent px-7 text-[14px] font-medium tracking-[-0.01em] text-white transition-colors hover:border-[#3A3A3A] hover:bg-[#0A0A0A] focus-visible:outline-offset-4"
-            >
-              Get in touch
-            </a>
-          </div>
-
-          <p className="mt-12 max-w-[56ch] border-t border-[#111111] pt-6 font-mono text-[11px] leading-relaxed tracking-wide text-[#5A5A5A]">
-            Open to Business Analysis · Product Ops · Project Management · Strategy · Supply Chain Technology · Data
-          </p>
-        </div>
+        <p className="mt-10 max-w-xl text-sm text-neutral-500">
+          {identity.availability}. Based in Bengaluru, comfortable working
+          remotely.
+        </p>
       </div>
     </section>
   );

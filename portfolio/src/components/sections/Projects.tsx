@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "@/lib/data";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
@@ -7,126 +8,125 @@ export function Projects() {
 
   return (
     <section
-      id="projects"
-      className="border-t border-[#111111] bg-black py-16 sm:py-20 lg:py-24"
+      id="work"
+      className="border-t border-neutral-200 bg-neutral-50 py-16 sm:py-20 lg:py-24"
     >
       <div className="container-main">
         <SectionHeading
-          eyebrow="Projects — 06"
-          title="Systems where ops meets technology"
-          description="Shipped, documented, and hosted. Each project solves a concrete operational problem — from credential fraud and LLM waste to content intelligence."
+          title="Selected work"
+          description="Projects where I owned delivery or built the product — from credential verification and LLM observability to content intelligence."
         />
 
-        {/* Featured — 3 */}
-        <div className="grid gap-4 md:grid-cols-3">
-          {featured.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project) => (
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
 
-        {/* Remaining */}
-        {others.length > 0 && (
-          <>
-            <div className="my-10 flex items-center gap-4">
-              <div className="h-px flex-1 bg-[#1A1A1A]" />
-              <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-[#5A5A5A]">
-                More builds
+        <div className="mt-10 overflow-hidden rounded-xl border border-neutral-200 bg-white">
+          {others.map((project, i) => (
+            <a
+              key={project.title}
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className={`group flex flex-col gap-1 p-6 transition-colors hover:bg-neutral-50 sm:flex-row sm:items-start sm:justify-between sm:gap-8 ${
+                i > 0 ? "border-t border-neutral-200" : ""
+              }`}
+            >
+              <div>
+                <div className="flex flex-wrap items-baseline gap-x-3">
+                  <h3 className="text-[17px] font-semibold tracking-tight text-neutral-900">
+                    {project.title}
+                  </h3>
+                  <span className="text-sm text-neutral-400">
+                    {project.tagline} · {project.year}
+                  </span>
+                </div>
+                <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-neutral-600">
+                  {project.description}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[13px] text-neutral-500"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <span
+                className="shrink-0 text-neutral-400 transition-colors group-hover:text-neutral-900"
+                aria-hidden
+              >
+                ↗
               </span>
-              <div className="h-px flex-1 bg-[#1A1A1A]" />
-            </div>
-            <div className="grid gap-4 md:grid-cols-3">
-              {others.map((project, i) => (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                  index={featured.length + i}
-                />
-              ))}
-            </div>
-          </>
-        )}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-function ProjectCard({
-  project,
-  index,
-}: {
-  project: (typeof projects)[number];
-  index: number;
-}) {
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
-    <article className="group flex h-full flex-col border border-[#1A1A1A] bg-[#0A0A0A] p-6 transition-colors duration-200 hover:border-[#2A2A2A] hover:bg-[#111111] sm:p-6">
-      {/* Meta row */}
-      <div className="flex items-center justify-between gap-3">
-        <span className="font-mono text-[11px] tracking-wide text-[#5A5A5A]">
-          {String(index + 1).padStart(2, "0")} · {project.year} ·{" "}
-          {project.category}
-        </span>
-        {project.featured && (
-          <span className="rounded-full border border-[#2A2A2A] bg-[#141414] px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.1em] text-[#8A8A8A]">
-            Featured
-          </span>
-        )}
-      </div>
+    <article className="group flex flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white transition-shadow hover:shadow-md">
+      {project.image && (
+        <div className="relative aspect-[16/10] overflow-hidden border-b border-neutral-200 bg-neutral-100">
+          <Image
+            src={project.image}
+            alt={`${project.title} — ${project.tagline}`}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </div>
+      )}
 
-      <h3 className="mt-4 text-[18px] font-semibold leading-[1.15] tracking-[-0.02em] text-white">
-        {project.title}
-      </h3>
-      <p className="mt-1 text-[13px] font-medium leading-snug text-[#8A8A8A]">
-        {project.tagline}
-      </p>
-
-      <p className="mt-3 text-[13.5px] leading-[1.6] text-[#CFCFCF]">
-        {project.description}
-      </p>
-
-      <ul className="mt-5 space-y-2">
-        {project.focus.slice(0, 5).map((f, i) => (
-          <li
-            key={i}
-            className="flex gap-2.5 text-[13px] leading-[1.5] text-[#8A8A8A]"
-          >
-            <span className="mt-[0.55em] h-px w-3 shrink-0 bg-[#2A2A2A]" aria-hidden />
-            <span>{f}</span>
-          </li>
-        ))}
-      </ul>
-
-      <div className="mt-5 rounded-[6px] border border-[#1A1A1A] bg-[#141414] px-3 py-2.5">
-        <p className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-[#5A5A5A]">
-          Outcome
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex flex-wrap items-baseline gap-x-3">
+          <h3 className="text-[18px] font-semibold tracking-tight text-neutral-900">
+            {project.title}
+          </h3>
+          <span className="text-sm text-neutral-400">{project.year}</span>
+        </div>
+        <p className="mt-0.5 text-sm font-medium text-neutral-500">
+          {project.tagline}
         </p>
-        <p className="mt-1 text-[13px] leading-relaxed text-[#CFCFCF]">
+        <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">
+          {project.description}
+        </p>
+        <p className="mt-4 rounded-lg bg-neutral-50 px-4 py-3 text-sm leading-relaxed text-neutral-700">
+          <span className="font-medium text-neutral-900">Result: </span>
           {project.outcome}
         </p>
-      </div>
 
-      <div className="mt-auto pt-5">
-        <div className="flex flex-wrap gap-1.5 border-t border-[#1A1A1A] pt-4">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="font-mono text-[11px] tracking-wide text-[#5A5A5A]"
+        <div className="mt-auto pt-5">
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-md border border-neutral-200 bg-white px-2 py-1 text-xs font-medium text-neutral-600"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 transition-colors hover:text-blue-700"
             >
-              {tag}
-              <span className="px-1.5 text-[#2A2A2A]">·</span>
-            </span>
-          ))}
+              View repository <span aria-hidden>→</span>
+            </a>
+          )}
         </div>
-
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-medium tracking-[-0.01em] text-white underline decoration-[#2A2A2A] underline-offset-4 transition-colors hover:decoration-white"
-          >
-            View repository <span aria-hidden>→</span>
-          </a>
-        )}
       </div>
     </article>
   );

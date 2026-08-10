@@ -1,113 +1,224 @@
 <div align="center">
 
-  <h1 align="center">N I S C H I T H &nbsp; R</h1>
+<a href="https://github.com/Nischith7102005">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Nischith%20R&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Business%20Operations%20%C2%B7%20Supply%20Chain%20%C2%B7%20Technology%20Management&descSize=16&descAlignY=58&descColor=a0a0b0" width="100%"/>
+</a>
 
-  <a href="https://github.com/Nischith7102005">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=16&pause=2500&color=555555&center=true&vCenter=true&width=800&lines=Bridging+Technical+Execution+and+Business+Strategy;Architecting+Data-Driven+Operational+Workflows;Optimizing+Cross-Functional+Team+Efficiency;Engineering+AI-Assisted+Automation+Solutions" alt="Value Proposition" />
-  </a>
+<br/>
 
-  <br><br>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=3000&pause=1000&color=8B8FA8&center=true&vCenter=true&width=600&lines=Project+Coordination+%7C+Operations+%7C+Strategy;Data+Infrastructure+%7C+Analytics+%7C+Automation;AI-Assisted+Development+%7C+Process+Improvement;Building+systems+that+work+at+scale.)](https://github.com/Nischith7102005)
 
-  <p align="center">
-    <a href="mailto:nischith.7102005@gmail.com">
-      <img src="https://img.shields.io/badge/nischith.7102005@gmail.com-181717?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-    </a>
-    <a href="https://linkedin.com/in/nischith-r-857669296">
-      <img src="https://img.shields.io/badge/LinkedIn-181717?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-    </a>
-    <a href="https://github.com/Nischith7102005">
-      <img src="https://img.shields.io/badge/Bengaluru,_India-181717?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location" />
-    </a>
-  </p>
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/nischith-r-857669296)
+[![GitHub](https://img.shields.io/badge/GitHub-161b22?style=flat-square&logo=github&logoColor=white)](https://github.com/Nischith7102005)
+[![Email](https://img.shields.io/badge/Email-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:nischith.7102005@gmail.com)
+![Location](https://img.shields.io/badge/Bengaluru%2C%20India-1a1a2e?style=flat-square&logo=googlemaps&logoColor=white)
+![CGPA](https://img.shields.io/badge/CGPA-8.13%20%2F%2010.0-2d2d44?style=flat-square)
+
 </div>
-
-<br><br>
-
-> **Executive Profile**
-> Cross-functional professional specializing in Technology Management, Supply Chain, and Business Operations. Proven track record of designing robust data pipelines, orchestrating cloud infrastructures, and deploying AI-assisted workflows to quantify operational inefficiencies, accelerate team execution, and drive strategic decision-making.
-
-<br>
-
-### Technical & Strategic Arsenal
-
-**Data Analytics & Infrastructure**
-<br>
-<img src="https://img.shields.io/badge/Python-181717?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Pandas-181717?style=flat-square&logo=pandas&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-181717?style=flat-square&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/PostgreSQL-181717?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/MongoDB-181717?style=flat-square&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/dbt_Core-181717?style=flat-square&logo=dbt&logoColor=white" />
-<img src="https://img.shields.io/badge/Excel-181717?style=flat-square&logo=microsoftexcel&logoColor=white" />
-
-**Cloud Deployment & DevOps**
-<br>
-<img src="https://img.shields.io/badge/AWS-181717?style=flat-square&logo=amazon-aws&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-181717?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/GitHub_Actions-181717?style=flat-square&logo=github-actions&logoColor=white" />
-<img src="https://img.shields.io/badge/Jenkins-181717?style=flat-square&logo=jenkins&logoColor=white" />
-<img src="https://img.shields.io/badge/Vercel-181717?style=flat-square&logo=vercel&logoColor=white" />
-<img src="https://img.shields.io/badge/Linux-181717?style=flat-square&logo=linux&logoColor=white" />
-
-**Automation, PM & Integrations**
-<br>
-<img src="https://img.shields.io/badge/n8n-181717?style=flat-square&logo=n8n&logoColor=white" />
-<img src="https://img.shields.io/badge/OpenAI-181717?style=flat-square&logo=openai&logoColor=white" />
-<img src="https://img.shields.io/badge/REST_APIs-181717?style=flat-square&logo=openapiinitiative&logoColor=white" />
-<img src="https://img.shields.io/badge/Jira-181717?style=flat-square&logo=jira&logoColor=white" />
-<img src="https://img.shields.io/badge/Notion-181717?style=flat-square&logo=notion&logoColor=white" />
-<img src="https://img.shields.io/badge/Agile_Sprints-181717?style=flat-square&logo=scrumalliance&logoColor=white" />
 
 ---
 
-### Selected Operations & Engineering Initiatives
+<div align="center">
+┌─────────────────────────────────────────────────────────────────┐
+│ I sit at the intersection of technology and business. │
+│ I don't just build — I coordinate, document, and deliver. │
+└─────────────────────────────────────────────────────────────────┘
 
-| Initiative | Role & Scope | Strategic Impact |
-| :--- | :--- | :--- |
-| **CertiSure**<br>*(Digital Platform)* | **Team Lead, Integration**<br>Led 5-member cross-functional team | Directed end-to-end sprint planning and dependency tracking. Translated stakeholder requirements into comprehensive API specs and system architecture documentation. |
-| **Monitr-AI**<br>*(Performance Dashboard)* | **Data & Operations Lead**<br>Analytics & Process Engineering | Authored the **Cognitive Waste Index** framework to quantify workflow inefficiencies. Translated complex technical data into clear reporting views for executive decision-making. |
-| **Psymap**<br>*(Content Intelligence)* | **Requirements Strategy**<br>System Architecture & Design | Defined end-to-end flows for a multi-source content analysis platform. Delivered interactive network visualizations for strategic decision-support patterns. |
+</div>
 
 ---
 
-### Professional Experience
+## About
 
-**Technology Intern &mdash; Humans Care Foundation**
-* Coordinated chatbot development and data visualization projects across cross-functional teams, ensuring precise on-time milestone delivery.
-* Managed comprehensive project documentation, task assignments, and milestone tracking utilizing Notion and GitHub.
-* Engineered solutions for organizational workflow bottlenecks, significantly improving execution efficiency during active project sprints.
+B.Tech Computer Science student at Dayananda Sagar University with hands-on experience in project coordination, data infrastructure, and AI-assisted development. I gravitate toward roles that require translating technical complexity into operational clarity — bridging engineering teams and business stakeholders to deliver outcomes that actually matter.
+
+Currently targeting: **Business Analysis · Project Management · Operations · Supply Chain · Strategy & Planning**
 
 ---
 
-### Development Activity & Performance Metrics
+## Featured Projects
 
-<br>
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**CertiSure**
+*Digital Certificate Verification Platform*
+
+Led a 5-member cross-functional team through end-to-end delivery. Responsible for sprint planning, stakeholder requirement gathering, system architecture documentation, and API specification. Maintained full project documentation suite including audit log designs and integration handoff documents.
+
+`Project Coordination` `System Design` `Team Lead`
+
+</td>
+<td width="50%" valign="top">
+
+**LaTeX Plagiarism Checker**
+*Browser-Based Document Processing App*
+
+Built a client-side multi-stage modular pipeline to analyze and safely rewrite LaTeX documents — preserving commands, math environments, and citations while targeting natural language prose. Implemented a strict-mode scoring algorithm to flag AI-like transitions and generic academic phrasing.
+
+`Python` `NLP` `Document Processing`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Living-Dataset**
+*Synthetic Data Generation Tool*
+
+Developed a Jupyter Notebook framework to iteratively grow synthetic datasets from small CSVs using Gaussian noise, crossover techniques, and classifier feedback loops. Successfully improved ML model accuracy by removing the bottleneck of real-world data collection.
+
+`Python` `Pandas` `Data Augmentation` `ML`
+
+</td>
+<td width="50%" valign="top">
+
+**Monitr-AI**
+*AI System Performance Monitoring Dashboard*
+
+Designed operational dashboards to surface AI model performance metrics for non-technical stakeholders. Developed the **Cognitive Waste Index** framework to quantify process inefficiencies and guide continuous improvement priorities.
+
+`Analytics` `Dashboard Design` `Operations`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**Psymap (Mind Brain Map)**
+*Content Intelligence & Visualization Tool*
+
+Defined user requirements and end-to-end system flow for a multi-source content analysis platform. Delivered interactive network visualizations enabling intuitive exploration of content relationships and decision-support patterns.
+
+`Requirements Design` `UX Flow` `Strategy`
+
+</td>
+<td width="50%" valign="top">
+
+**More on GitHub →**
+
+All repositories include structured documentation, architecture notes, and clear commit histories reflecting real project discipline.
+
+[![GitHub](https://img.shields.io/badge/View%20All%20Repos-161b22?style=flat-square&logo=github&logoColor=white)](https://github.com/Nischith7102005?tab=repositories)
+
+</td>
+</tr>
+</table>
+
+---
+
+## Technical Stack
 
 <div align="center">
-  <!-- Animated Activity Graph -->
-  <a href="https://github.com/Nischith7102005">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nischith7102005&bg_color=00000000&color=777777&line=555555&point=222222&area=true&hide_border=true&hide_title=true" alt="Activity Graph" width="95%" />
-  </a>
+
+**Cloud & Deployment**
+
+![AWS](https://img.shields.io/badge/AWS-232f3e?style=flat-square&logo=amazonaws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-1d63ed?style=flat-square&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088ff?style=flat-square&logo=githubactions&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-d24939?style=flat-square&logo=jenkins&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0b0d0e?style=flat-square&logo=railway&logoColor=white)
+
+**Data & Analytics**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47a248?style=flat-square&logo=mongodb&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776ab?style=flat-square&logo=python&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt%20Core-ff694b?style=flat-square&logo=dbt&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479a1?style=flat-square&logo=mysql&logoColor=white)
+
+**Automation & Integration**
+
+![n8n](https://img.shields.io/badge/n8n-ef6c00?style=flat-square&logo=n8n&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-ff6c37?style=flat-square&logo=postman&logoColor=white)
+![REST API](https://img.shields.io/badge/REST%20API-005571?style=flat-square&logo=fastapi&logoColor=white)
+
+**PM & Ops Tools**
+
+![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-161b22?style=flat-square&logo=github&logoColor=white)
+![Jira](https://img.shields.io/badge/Jira-0052cc?style=flat-square&logo=jira&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-fcc624?style=flat-square&logo=linux&logoColor=black)
+
 </div>
 
-<br>
+---
+
+## Core Competencies
 
 <div align="center">
-  <!-- Top Languages Card -->
-  <a href="https://github.com/Nischith7102005">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nischith7102005&layout=compact&theme=transparent&hide_border=true&title_color=555555&text_color=777777&icon_color=555555" alt="Top Languages" width="46%" />
-  </a>
-  <!-- Dynamic Stats Card -->
-  <a href="https://github.com/Nischith7102005">
-    <img src="https://github-readme-stats.vercel.app/api?username=Nischith7102005&show_icons=true&theme=transparent&hide_border=true&title_color=555555&text_color=777777&icon_color=555555" alt="GitHub Stats" width="46%" />
-  </a>
+Requirements Gathering Sprint Planning Process Mapping
+Stakeholder Communication Gap Analysis Workflow Optimization
+KPI Reporting Strategic Planning ETL Design
+Prompt Engineering Technical Documentation Cross-functional Collaboration
+
 </div>
 
-<br>
+---
+
+## GitHub Stats
 
 <div align="center">
-  <!-- Animated Contribution Streak -->
-  <a href="https://github.com/Nischith7102005">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Nischith7102005&theme=transparent&hide_border=true&ring=555555&fire=555555&currStreakNum=777777&sideNums=777777&currStreakLabel=555555&sideLabels=555555&dates=555555" alt="GitHub Streak" width="60%" />
-  </a>
+
+<img src="https://github-readme-stats.vercel.app/api?username=Nischith7102005&show_icons=true&theme=dark&bg_color=0d1117&title_color=8b8fa8&text_color=c9d1d9&icon_color=6e7681&border_color=21262d&hide_border=false&count_private=true" height="165"/>
+&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nischith7102005&layout=compact&theme=dark&bg_color=0d1117&title_color=8b8fa8&text_color=c9d1d9&border_color=21262d&hide_border=false" height="165"/>
+
+<br/><br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com?user=Nischith7102005&theme=dark&background=0d1117&border=21262d&stroke=21262d&ring=8b8fa8&fire=8b8fa8&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=6e7681&sideLabels=6e7681&dates=6e7681" height="165"/>
+
+</div>
+
+---
+
+## Certifications
+
+<div align="center">
+
+| Certification | Issuer |
+|---|---|
+| Data Analytics — SQL, Excel & Python | Great Learning |
+| Cloud Platform Job Simulation | Verizon / Forage |
+| Data Analytics & AI | Proov |
+| Data & Database Fundamentals | IBM SkillsBuild |
+| AWS Cloud Foundations | Amazon Web Services |
+| NoSQL Databases (MongoDB) | Simplilearn |
+
+</div>
+
+---
+
+## Education
+
+**B.Tech — Computer Science and Technology**
+Dayananda Sagar University · Bengaluru · CGPA: 8.13 / 10.0
+
+*Relevant Coursework: Software Engineering · Project Management · Database Systems · Business Communication · Operations Management · Entrepreneurship · Strategy & Innovation*
+
+---
+
+## Experience
+
+**Technology Intern** — Humans Care Foundation, Bengaluru
+
+Coordinated chatbot development and data visualization projects across a cross-functional team, ensuring on-time delivery of all milestones. Managed end-to-end project documentation and milestone tracking using Notion and GitHub. Identified and resolved workflow bottlenecks, improving sprint execution efficiency. Reported progress and key deliverables to organizational stakeholders through structured status updates.
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer" width="100%"/>
+
+*Open to internships and entry-level roles in Business Analysis, Operations, Project Management, Supply Chain, and Strategy.*
+
+**nischith.7102005@gmail.com · +91 8792881313 · Bengaluru, India**
+
+![Profile Views](https://komarev.com/ghpvc/?username=Nischith7102005&style=flat-square&color=2d2d44&label=Profile+Views)
+
 </div>

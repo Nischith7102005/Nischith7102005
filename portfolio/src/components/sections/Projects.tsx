@@ -3,9 +3,6 @@ import { projects } from "@/lib/data";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 export function Projects() {
-  const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
-
   return (
     <section
       id="work"
@@ -18,52 +15,8 @@ export function Projects() {
         />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((project) => (
+          {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
-
-        <div className="mt-10 overflow-hidden rounded-xl border border-neutral-200 bg-white">
-          {others.map((project, i) => (
-            <a
-              key={project.title}
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className={`group flex flex-col gap-1 p-6 transition-colors hover:bg-neutral-50 sm:flex-row sm:items-start sm:justify-between sm:gap-8 ${
-                i > 0 ? "border-t border-neutral-200" : ""
-              }`}
-            >
-              <div>
-                <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h3 className="text-[17px] font-semibold tracking-tight text-neutral-900">
-                    {project.title}
-                  </h3>
-                  <span className="text-sm text-neutral-400">
-                    {project.tagline} · {project.year}
-                  </span>
-                </div>
-                <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-neutral-600">
-                  {project.description}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[13px] text-neutral-500"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <span
-                className="shrink-0 text-neutral-400 transition-colors group-hover:text-neutral-900"
-                aria-hidden
-              >
-                ↗
-              </span>
-            </a>
           ))}
         </div>
       </div>
@@ -87,12 +40,9 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       )}
 
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex flex-wrap items-baseline gap-x-3">
-          <h3 className="text-[18px] font-semibold tracking-tight text-neutral-900">
-            {project.title}
-          </h3>
-          <span className="text-sm text-neutral-400">{project.year}</span>
-        </div>
+        <h3 className="text-[18px] font-semibold tracking-tight text-neutral-900">
+          {project.title}
+        </h3>
         <p className="mt-0.5 text-sm font-medium text-neutral-500">
           {project.tagline}
         </p>

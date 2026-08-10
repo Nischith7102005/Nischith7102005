@@ -10,7 +10,7 @@ export function Contact() {
       <div className="container-main">
         <SectionHeading
           title="Get in touch"
-          description="I'm open to internships and full-time roles in business operations, project management, operations analytics, and similar areas for 2026. If you have a role — or a problem that fits — I'd like to talk."
+          description="For project discussions, collaboration, or a conversation about operations, data, and software, feel free to reach out."
         />
 
         <div className="flex flex-wrap gap-3">

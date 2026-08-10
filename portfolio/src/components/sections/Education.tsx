@@ -25,10 +25,6 @@ export function Education() {
               <span className="font-medium text-neutral-900">CGPA: </span>
               {education.cgpa}
             </p>
-            <p className="mt-2 text-[15px] leading-relaxed text-neutral-600">
-              <span className="font-medium text-neutral-900">Coursework: </span>
-              {education.coursework}
-            </p>
           </div>
 
           <div className="rounded-xl border border-neutral-200 bg-white p-6 sm:p-8">
